@@ -1,0 +1,43 @@
+version: '3'
+services:
+  api:
+    build: ./api
+    volumes:
+      - ./app_data:/app_data
+    environment:
+      # This ensures that errors are printed as they occur, which
+      # makes debugging easier.
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=DEBUG
+    command: /api/dev.sh
+  grobid:
+    build: ./grobid
+    volumes:
+      - ./app_data:/app_data
+    environment:
+      # This ensures that errors are printed as they occur, which
+      # makes debugging easier.
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=DEBUG
+  review_worker:
+    build: ./review_worker
+    volumes:
+      - ./review_worker:/api
+      - ./app_data:/app_data
+    environment:
+      # This ensures that errors are printed as they occur, which
+      # makes debugging easier.
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=DEBUG
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    depends_on:
+      - grobid
+      - api
+  proxy:
+    build: ./proxy
+    ports:
+      - 8080:8080
+    depends_on:
+      - api

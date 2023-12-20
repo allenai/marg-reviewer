@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	width: 100%;
+	max-width: 900px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.instruction-item {
+	margin: 1em 0;
+	padding: 0.5em;
+	background-color: #eef;
+    border-radius: 4px;
+}
+.comment-item {
+	margin: 2em 0;
+	padding: 0.5em;
+	font-size: 12px;
+	background-color: #eef;
+    border-radius: 4px;
+}
+.review-comment {
+	font-size: 16px;
+}
+#response {
+	margin-top: 1em;
+	/*margin-left: auto;
+	margin-right: auto;*/
+}
+
+.review {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+.review-survey-item {
+  margin-bottom: 1em;
+  display: flex;
+}
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button-group input[type="radio"] {
+  display: none;
+}
+
+.button-group label {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #ddd;
+  cursor: pointer;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-group input[type="radio"]:hover + label {
+  background-color: #bbb;
+}
+
+.button-group input[type="radio"]:checked + label {
+  background-color: #6af;
+}
+
+.comment-button-group label {
+	padding: 5px 10px;
+}
+
+.comment-feedback {
+	width: 98%;
+    height: 1em;
+}
+
+#demographic-questions {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 1em 2em;
+	margin-bottom: 1em;
+}
+
+.question-label {
+	/*font-weight: bold;*/
+	font-size: 14pt;
+}
+
+.review-textarea {
+	width: 100%;
+	height: 100px;
+}
+
+#submit-button {
+	padding: 20px 40px;
+	margin: 5px;
+	background-color: #36d;
+	color: white;
+	font-size: 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+#submit-button:disabled {
+	background-color: #ddd;
+	color: #999;
+	cursor: default;
+}
+</style>
+  </head>
+<body>
+	<noscript><p style="font-size: 32px; color: red;">Please enable JavaScript to use this page; the survey requires it to work.</p></noscript>
+    <a href="/">Upload another paper</a>
+    <h3>Survey Guidelines</h3>
+	<p>Reviews for your paper are shown below.  We ask you to rate a few factors for each comment in the review:</p>
+    <ul>
+        <li class="instruction-item"><b>Specificity:</b> Does the comment make a suggestion specific to the paper, or is it generic (could apply to many papers)?  Please note that a comment may be verbose without being specific, or vice versa.</li>
+        <li class="instruction-item"><b>Accuracy:</b> Does the comment display an accurate understanding of the paper and make a valid critique?  For example, suppose a comment says the paper is missing statistical significance tests and should include them.  If the paper doesn't have significance tests and could potentially benefit from including them, please rate the comment as "accurate" (even if the importance of those tests is questionable).  If the paper has tests on one or two results but not all, and the comment doesn't mention this, the comment would have a "minor" inaccuracy.  If the paper already has extensive significance tests or provides substantial justification for not including them, the comment would have a "major" inaccuracy.</li>
+        <li class="instruction-item"><b>Overall rating:</b> How helpful is the comment overall?  Is the comment one that you would want to see in a review (Good), one that you might not mind seeing but don't care much about (Neutral), or one that is useless or invalid (Bad)?</li>
+    </ul>
+<h2>Reviews</h2>
+
+<a href="/pdf/{{paper.hash}}">Paper: {{paper.title}}</a>
+
+<form id="response-survey" method="POST", action="/survey-submit">
+<input type="hidden" name="pdf_hash" value="{{paper.hash}}">
+<input type="hidden" name="user_id" value="{{user.user_id}}">
+<div id="response">
+{% for rev in reviews %}
+	{% set rev_idx = loop.index0 %}
+	{% set rev_id = rev.row_id %}
+	{% set method_id = rev.method_id %}
+	<input type="hidden" name="reviews.{{ method_id }}.method_id" value="{{method_id}}">
+	<input type="hidden" name="reviews.{{ method_id }}.presentation_idx" value="{{rev_idx}}">
+	<input type="hidden" name="reviews.{{ method_id }}.row_id" value="{{rev_id}}">
+
+	<div class="review">
+		<h3>Review {{ rev_idx+1 }}</h3>
+        {% if show_methods %}
+        <p><b>Method:</b> {{ rev.method_id }}</p>
+        {% endif %}
+		<ul>
+			{% for item in rev.comments %}
+			<input type="hidden" name="reviews.{{ method_id }}.comments${{loop.index0}}.comment_text" value="{{item}}">
+			<li class="comment-item">
+				<span class="review-comment">{{ item }}</span><br>
+				<div class="button-group comment-button-group">
+					<div style="display: flex; vertical-align: middle; padding: 10px 0;"><b>Specificity:</b></div>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity-0" name="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity" value="0">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity-0">Very generic</label>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity-1" name="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity" value="1">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity-1">Somewhat generic</label>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity-2" name="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity" value="2">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity-2">Somewhat specific</label>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity-3" name="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity" value="3">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.specificity-3">Very specific</label>
+				</div>
+				<div class="button-group comment-button-group">
+					<div style="display: flex; vertical-align: middle; padding: 10px 0;"><b>Accuracy:</b></div>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.factual-0" name="reviews.{{method_id}}.comments${{ loop.index0 }}.factual" value="0">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.factual-0">Major inaccuracy</label>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.factual-1" name="reviews.{{method_id}}.comments${{ loop.index0 }}.factual" value="1">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.factual-1">Minor inaccuracy</label>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.factual-2" name="reviews.{{method_id}}.comments${{ loop.index0 }}.factual" value="2">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.factual-2">Accurate</label>
+				</div>
+				<div class="button-group comment-button-group">
+					<div style="display: flex; vertical-align: middle; padding: 10px 0;"><b>Rate this comment:</b></div>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.rating-0" name="reviews.{{method_id}}.comments${{ loop.index0 }}.rating" value="0">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.rating-0">Bad</label>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.rating-1" name="reviews.{{method_id}}.comments${{ loop.index0 }}.rating" value="1">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.rating-1">Neutral</label>
+					<input type="radio" id="reviews.{{method_id}}.comments${{ loop.index0 }}.rating-2" name="reviews.{{method_id}}.comments${{ loop.index0 }}.rating" value="2">
+					<label for="reviews.{{method_id}}.comments${{ loop.index0 }}.rating-2">Good</label>
+				</div>
+                <label>Any additional feedback on the comment?</label>&nbsp;&nbsp;<textarea name="reviews.{{method_id}}.comments${{ loop.index0 }}.feedback" class="comment-feedback"></textarea>
+			</li>
+			{% endfor %}
+		</ul>
+		<hr style="margin: 2em 0">
+		<div class="review-survey">
+
+			<label class="question-label">Overall, how did you feel about the length of the review?  Was it too short or too verbose?</label><br/>
+			<div class="button-group">
+				<input type="radio" id="reviews.{{ method_id }}.verbosity-0" name="reviews.{{ method_id }}.verbosity" value="0">
+				<label for="reviews.{{ method_id }}.verbosity-0">Way too short</label>
+				<input type="radio" id="reviews.{{ method_id }}.verbosity-1" name="reviews.{{ method_id }}.verbosity" value="1">
+				<label for="reviews.{{ method_id }}.verbosity-1">Too short</label>
+				<input type="radio" id="reviews.{{ method_id }}.verbosity-2" name="reviews.{{ method_id }}.verbosity" value="2">
+				<label for="reviews.{{ method_id }}.verbosity-2">Just right</label>
+				<input type="radio" id="reviews.{{ method_id }}.verbosity-3" name="reviews.{{ method_id }}.verbosity" value="3">
+				<label for="reviews.{{ method_id }}.verbosity-3">Too long</label>
+				<input type="radio" id="reviews.{{ method_id }}.verbosity-4" name="reviews.{{ method_id }}.verbosity" value="4">
+				<label for="reviews.{{ method_id }}.verbosity-4">Way too long</label>
+			</div>
+            <br>
+
+			<label class="question-label">Overall, how helpful is this review?  Do you think the feedback would enable you to improve the paper?</label><br/>
+			<div class="button-group">
+				<input type="radio" id="reviews.{{ method_id }}.helpful-0" name="reviews.{{ method_id }}.helpful" value="0">
+				<label for="reviews.{{ method_id }}.helpful-0">Highly unhelpful</label>
+				<input type="radio" id="reviews.{{ method_id }}.helpful-1" name="reviews.{{ method_id }}.helpful" value="1">
+				<label for="reviews.{{ method_id }}.helpful-1">Unhelpful</label>
+				<input type="radio" id="reviews.{{ method_id }}.helpful-2" name="reviews.{{ method_id }}.helpful" value="2">
+				<label for="reviews.{{ method_id }}.helpful-2">Neither unhelpful nor helpful</label>
+				<input type="radio" id="reviews.{{ method_id }}.helpful-3" name="reviews.{{ method_id }}.helpful" value="3">
+				<label for="reviews.{{ method_id }}.helpful-3">Helpful</label>
+				<input type="radio" id="reviews.{{ method_id }}.helpful-4" name="reviews.{{ method_id }}.helpful" value="4">
+				<label for="reviews.{{ method_id }}.helpful-4">Highly helpful</label>
+			</div>
+            <br>
+
+			<label class="question-label">Any additional feedback on the review?</label><br/>
+			<textarea name="reviews.{{ method_id }}.freeform" class="review-textarea"></textarea>
+		</div>
+	</div>
+{% endfor %}
+</div>
+
+	<div id="demographic-questions">
+		<!--h4>Final Questions</h4>
+		<label class="question-label">Overall, which of the reviews did you think was the best one?</label><br/-->
+
+
+		<h4>Demographic Questions</h4>
+		<label class="question-label">Which kind of author are you on the paper?</label><br/>
+		<div class="button-group">
+			<input type="radio" id="author-type-0" name="author-type" value="0">
+			<label for="author-type-0">Lead or equal contributor</label>
+			<input type="radio" id="author-type-1" name="author-type" value="1">
+			<label for="author-type-1">Co-author</label>
+			<input type="radio" id="author-type-2" name="author-type" value="2">
+			<label for="author-type-2">Last author</label>
+			<input type="radio" id="author-type-3" name="author-type" value="3">
+			<label for="author-type-3">Not an author</label>
+		</div>
+		<br>
+
+		<label class="question-label">Has the paper gone through peer review before?</label><br/>
+		<div class="button-group">
+			<input type="radio" id="prior-peer-review-0" name="prior-peer-review" value="0">
+			<label for="prior-peer-review-0">Yes, for a conference/journal</label>
+			<input type="radio" id="prior-peer-review-1" name="prior-peer-review" value="1">
+			<label for="prior-peer-review-1">Yes, informally from coworkers/peers (non-authors)</label>
+			<input type="radio" id="prior-peer-review-2" name="prior-peer-review" value="2">
+			<label for="prior-peer-review-2">No</label>
+		</div>
+		<br>
+
+		<label class="question-label">How many hours of experience do you have using extremely large chat-based language models (such as ChatGPT, Bard, etc)?</label><br/>
+		<!--input type="number" id="chatllm-hours-per-week" name="chatllm-hours-per-week" min="0" max="168" step="1" value="0"-->
+		<div class="button-group">
+			<input type="radio" id="chatllm-experience-0" name="chatllm-experience" value="0">
+			<label for="chatllm-experience-0">&lt; 1 hour</label>
+			<input type="radio" id="chatllm-experience-1" name="chatllm-experience" value="1">
+			<label for="chatllm-experience-1">1-10 hours</label>
+			<input type="radio" id="chatllm-experience-2" name="chatllm-experience" value="2">
+			<label for="chatllm-experience-2">10-100 hours</label>
+			<input type="radio" id="chatllm-experience-3" name="chatllm-experience" value="3">
+			<label for="chatllm-experience-3">100+ hours</label>
+		</div>
+		<br>
+
+		<label class="question-label">How many years of experience do you have as a researcher?</label><br/>
+		<!--input type="number" id="researcher-years-experience" name="researcher-years-experience" min="0" max="100" step="1" value="0"-->
+		<div class="button-group">
+			<input type="radio" id="researcher-experience-0" name="researcher-experience" value="0">
+			<label for="researcher-experience-0">&lt; 1 year</label>
+			<input type="radio" id="researcher-experience-1" name="researcher-experience" value="1">
+			<label for="researcher-experience-1">1-5 years</label>
+			<input type="radio" id="researcher-experience-2" name="researcher-experience" value="2">
+			<label for="researcher-experience-2">5-10 years</label>
+			<input type="radio" id="researcher-experience-3" name="researcher-experience" value="3">
+			<label for="researcher-experience-3">10+ years</label>
+		</div>
+		<br>
+
+		<label class="question-label">How much experience do you have reviewing research papers?</label><br/>
+		<div class="button-group">
+			<input type="radio" id="reviewer-experience-0" name="reviewer-experience" value="0">
+			<label for="reviewer-experience-0">None</label>
+			<input type="radio" id="reviewer-experience-1" name="reviewer-experience" value="1">
+			<label for="reviewer-experience-1">1-5 conferences/journals</label>
+			<input type="radio" id="reviewer-experience-2" name="reviewer-experience" value="2">
+			<label for="reviewer-experience-2">5+ conferences/journals</label>
+		</div>
+	</div>
+
+<div id="submit">
+	<button id="submit-button">Submit</button>
+</form>
+
+<script>
+	document.getElementById('response-survey').addEventListener('submit', function(event) {
+		event.preventDefault();
+		let formData = new FormData(this);
+
+		fetch('/survey-submit', {
+			method: 'POST',
+			body: formData
+		})
+		.then(response => response.json())
+		.then(data => {
+			console.log(data);
+			let b = document.getElementById('submit-button');
+			b.innerHTML = 'Submitted!';
+			//b.disabled = true;
+		})
+		.catch(error => {
+			console.error('Error:', error);
+		});
+	});
+</script>
+
+</body>
+</html>
+

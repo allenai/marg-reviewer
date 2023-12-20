@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+}
+ul {
+	font-size: 20px;
+}
+li {
+	padding: 4px;
+}
+</style>
+  </head>
+<body>
+<h2>Reviewed papers</h2>
+
+<a href="/">Upload another file</a>
+
+<ul>
+{% for paper in papers %}
+	<li><a href="/result/{{paper.hash}}">{{paper.title}}</a></li>
+{% endfor %}
+
+</body>
+</html>
+

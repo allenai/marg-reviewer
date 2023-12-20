@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<style>
+body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	background-color: #2c3e50;
+}
+
+#body-container {
+			width: 100%;
+			max-width: 600px;
+			padding: 1em;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #ecf0f1;
+			border-radius: 10px;
+}
+
+#submit-button {
+	padding: 10px 20px;
+	margin: 5px;
+	background-color: #36d;
+	color: white;
+	font-size: 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+		#upload-form-container {
+			border: 1px solid #ccc;
+			padding: 1em;
+			border-radius: 10px;
+			background-color: #c0e3ff;
+		}
+
+		input[type=file] {
+			display: none;
+		  padding: 10px;
+		  cursor: pointer;
+		  background-color: #4CAF50;
+		  color: white;
+		  border: none;
+		  border-radius: 4px;
+		  font-size: 16px;
+		}
+
+		.button-like {
+		  padding: 10px 20px;
+		  margin: 5px;
+		  background-color: #ddd;
+		  cursor: pointer;
+		  vertical-align: middle;
+		  white-space: nowrap;
+		  display: inline-block;
+		}
+
+		.button-like:hover {
+		  background-color: #ccc;
+		}
+
+		.button-like:active {
+		  background-color: #aaa;
+		}
+			
+		</style>
+
+	<head>
+<body>
+
+
+	<div id="body-container">
+	<h2>MARG reviewer</h2>
+
+	<p>We are investigating tools to automatically generate feedback that can help to improve papers.  Upload a paper PDF using the box below to get generated reviews from a variety of systems.  When the reviews have been generated, we'll notify the provided email address and send you a survey link with some questions about the reviews you received.</p>
+	<p>Please only upload papers that you have co-authored and which were first made publicly available after 2022 (GPT-4's training data cutoff).  It is also fine to upload a paper that hasn't yet been made public, as long as it is fully written (i.e., it wouldn't get desk-rejected at a conference) and does NOT include <span style="text-decoration: underline">line numbers</span> (which can cause parsing errors).</p>
+	<p>Finally, because some systems have a non-negligible cost, we ask that you upload only 1-2 papers and take the survey if possible.</p>
+	<p>Privacy notice: The scores you submit in the survey may be released (anonymously) as part of a public dataset.  However, the text of the papers you submit and the review comments you receive will not be publicly released without your consent.  The text of your paper may be submitted to a third-party API (OpenAI) in the process of producing reviews.</p>
+<div id="upload-form-container" action="/upload" method="POST">
+
+	<form id="upload-form">
+		<input type="file" id="file" name="file" accept="pdf"/>
+		<label for="file" style="font-weight: bold">Paper PDF (max 10 MB):</label>
+		<label id="file-button" for="file" class="button-like">Browse files...</label><br>
+        <span id="file-name"></span><br><br>
+
+		<label for="email" style="font-weight: bold">Email (to notify when complete, and to disambiguate responses):</label><br>
+		<input type="text" id="notification_email" name="notification_email" /><br>
+		<input id="submit-button" type="submit" value="Submit" />
+	</form>
+</div>
+
+
+<p id="response"></p>
+
+<br>
+
+	</div>
+
+<script>
+document.getElementById('upload-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var fileInput = document.getElementById('file');
+    var file = fileInput.files[0];
+    var formData = new FormData(this);
+
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+		let span_elem = document.createElement('span');
+
+        span_elem.innerHTML = "Your request has been received.  You will receive an email when the reviews are complete.";
+        document.getElementById('response').innerHTML = span_elem.outerHTML;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+		let span_elem = document.createElement('span');
+        span_elem.innerHTML = "Your request failed; check if your file is too large or if your connection is slow.";
+        span_elem.style.color = 'red';
+        document.getElementById('response').innerHTML = span_elem.outerHTML;
+    });
+});
+
+document.getElementById('file').addEventListener('change', function(e) {
+  let fileName = e.target.files[0].name;
+  document.getElementById('file-name').textContent = 'Selected ' + fileName;
+});
+
+
+(function() {
+  let files = document.getElementById('file').files;
+  if (files.length > 0) {
+  	document.getElementById('file-name').textContent = 'Selected ' + files[0].name;
+  } else {
+  	document.getElementById('file-name').textContent = 'No file selected';
+  }
+})();
+</script>
+
+</body>
+</html>
