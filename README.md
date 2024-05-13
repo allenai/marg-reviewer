@@ -1,6 +1,6 @@
 ## MARG
 
-This is the repository for [MARG: Multi-Agent Review Generation for Scientific Papers](paper link coming soon).  It contains the code for the web interface that was used for the user study in the paper, and functions as a demo of our system.
+This is the repository for [MARG: Multi-Agent Review Generation for Scientific Papers](https://arxiv.org/pdf/2401.04259).  It contains the code for the web interface that was used for the user study in the paper, and functions as a demo of our system.
 
 To run the demo, install [Docker](https://www.docker.com/get-started) (and potentially docker-compose, depending on whether your Docker version has `docker compose` built in).  You will also need to create a file called `.env` with
 ```
