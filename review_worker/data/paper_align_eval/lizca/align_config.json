@@ -1,0 +1,13 @@
+{
+    "aries_base_path": "data/aries/",
+    "gpt3_cache_db_path": "data/gpt3_cache.sqlite",
+    "gpt_model": "gpt-4-0613",
+    "gpt_default_max_length": 2048,
+    "generated_comments_file": null,
+    "output_dir": "data/paper_align_eval/lizca/output/",
+    "model_type": "gpt_liang_etal",
+    "paper_chunk_size": 6500,
+    "prompts": {},
+    "seed": 1,
+    "_generated_comments_file": "data/paper_align_eval/lizca/output/all_results.jsonl"
+}

@@ -1,0 +1,20 @@
+{
+    "aries_base_path": "data/aries/",
+    "gpt3_cache_db_path": "data/gpt3_cache.sqlite",
+    "gpt_model": "gpt-4-0613",
+    "gpt_default_max_length": 2048,
+    "generated_comments_file": null,
+    "output_dir": "data/paper_align_eval/sarg_b/output/",
+    "model_type": "gpt_bare_independent_chunk",
+    "paper_chunk_size": 4096,
+    "prompts": {
+        "system_prompt_v1": "You are ReviewGPT, an expert scientific paper reviewer.",
+        "_task_prompt_set1_v1": "A chunk of text from a scientific paper is shown below.  Write feedback comments for the paper in the style of a scientific paper review.\n\n--- START PAPER CHUNK ---\n{source_paper_chunk}\n--- END PAPER CHUNK ---",
+        "task_prompt_set1_v1": "Write feedback comments in the style of a scientific paper review for the following portion of a scientific paper.  You can skip minor grammar comments.\n--- START PAPER CHUNK ---\n{source_paper_chunk}\n--- END PAPER CHUNK ---",
+        "combiner_system_prompt": "You are ReviewGPT, an expert scientific paper reviewer.",
+        "combiner_task_prompt": "Here are some lists of review comments that were made about different portions of the paper:\n--- BEGIN REVIEWS ---\n{reviewlists}\n--- END REVIEWS ---\n\nMerge these lists into a final list of review comments.  Any comments that are duplicates (saying essentially the same thing as other comments) should be merged or deleted.",
+        "combiner_task_prompt_v2": "Write the final list of review comments as a JSON list of strings.  Do not include any additional commentary."
+    },
+    "seed": 1,
+    "_generated_comments_file": "data/paper_align_eval/sarg_b/output/all_results.jsonl"
+}

@@ -1,0 +1,923 @@
+[
+    [
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not clearly differentiate the proposed method from Neural Architecture Search (NAS).",
+                "predicted_comment": "The paper does not provide a clear comparison between the proposed AdaGCCN and other existing methods. The authors should provide a more detailed comparison, including a discussion on the strengths and weaknesses of each method. The paper should include a discussion on why AdaGCCN outperforms other methods."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The use of Reinforcement Learning (RL) during the training process to search for and modify the neural structures may create stability issues. The paper should provide some theoretical justifications or 'proofs' of convergence, or at the minimum, provide some empirical analysis on the stability of the training process.",
+                "predicted_comment": "The paper lacks a clear explanation of how the assistant module works and how it interacts with the main model. More details on the RL agent and its role in the assistant module are needed. The paper should provide a more detailed explanation of how the assistant module selects the optimal modification to the model structure."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The experimental methodology used in the paper is not well detailed, making it difficult to reproduce the reported results.",
+                "predicted_comment": "The paper does not provide a clear explanation of how the parallel processing works. More details on how the tasks are split and assigned to multiple workers are needed. The paper should provide a more detailed explanation of the scheduling strategy used in the parallel process."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper lacks ablation experiments on the epoch sliding window size and choice of search space for D and W. It's also unclear how the method would perform without the capsule components, i.e. is the assistant module strategy practically useful for other architectures.",
+                "predicted_comment": "The paper lacks a clear explanation of how the assistant module works and how it interacts with the main model. More details on the RL agent and its role in the assistant module are needed. The paper should provide a more detailed explanation of how the assistant module selects the optimal modification to the model structure."
+            },
+            {
+                "reference_id": 4,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper lacks meaningful runtime comparisons between the proposed method and the various previous works without the assistant module. For example, a comparison to a parallel cross validation version of CapsGNN in figure 4 is suggested.",
+                "predicted_comment": "The paper does not provide a clear comparison between the proposed AdaGCCN and other existing methods. The authors should provide a more detailed comparison, including a discussion on the strengths and weaknesses of each method. The paper should include a discussion on why AdaGCCN outperforms other methods."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not clearly address why the proposed method of inflating 2D CNN of image for 3D pointcloud works.",
+                "predicted_comment": "The paper does not provide a clear explanation of the theoretical underpinnings of the proposed approach. The authors should provide a more detailed theoretical analysis of their approach, explaining why it works and under what conditions it is expected to work."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The experimental section could be improved. More details about how the comparison to some baselines was made would be appreciated.",
+                "predicted_comment": "The paper may lack a thorough comparison with other existing methods. It is unclear how the proposed method compares with other approaches in terms of computational efficiency. The authors could provide more details on how their method improves upon or differs from other methods in handling the diversity of future frames."
+            }
+        ],
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The datasets used in the study are not representative due to their simplicity and experimental nature.",
+                "predicted_comment": "The evaluation of the proposed method may not be comprehensive enough. The authors could include more datasets in their evaluation to demonstrate the robustness of their method. The paper could benefit from a more detailed discussion on the limitations of the proposed method."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The current benchmark lacks sufficient training and evaluation data. The lack of training corpora may be addressed by pretraining and building synthetic data.",
+                "predicted_comment": "The dataset used for the task is relatively small, which may limit the generalizability of the results. The authors acknowledge this limitation and attempt to mitigate it by using a pre-trained transformer model, but it is unclear how effective this approach is in overcoming the limitation of the small dataset."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not compare the proposed method against other systems listed in section 4 that also aim to automate the formalization process.",
+                "predicted_comment": "The paper lacks a thorough comparison with existing methods or baselines. While the authors mention that several baseline models failed to yield even syntactically valid L A T E X, a more detailed comparison with these models would strengthen the paper."
+            },
+            {
+                "reference_id": 5,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The experimental section is short and lacks important comparisons to other work in this area.",
+                "predicted_comment": "The paper lacks a thorough comparison with existing methods or baselines. While the authors mention that several baseline models failed to yield even syntactically valid L A T E X, a more detailed comparison with these models would strengthen the paper."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The efficacy of LBS, especially in more complex environments like Contract Bridge, is not convincingly demonstrated despite the provided ablation studies.",
+                "predicted_comment": "The experimental results may not be sufficiently robust. The authors could provide additional experimental results to further validate their claims about the efficiency and scalability of LBS. The authors could conduct experiments in other domains to demonstrate the generalizability of LBS."
+            }
+        ],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not compare the proposed model, DDNet, to any other baselines that incorporate the audio information in a different way.",
+                "predicted_comment": "The paper lacks a detailed comparison with existing methods. It is not clear how the proposed method compares with other state-of-the-art methods in terms of performance. The authors should provide a more detailed comparison with existing methods, including a discussion on the strengths and weaknesses of each method."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The work is limited in its scope and is not yet ready to be published at ICLR due to lack of comparisons made to prior approaches, making it hard to assess the merits of the proposed approach.",
+                "predicted_comment": "The paper lacks a detailed comparison with existing methods. It is not clear how the proposed method compares with other state-of-the-art methods in terms of performance. The authors should provide a more detailed comparison with existing methods, including a discussion on the strengths and weaknesses of each method."
+            }
+        ],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper did not compare to any other active sampling strategies. The authors made no effort to replicate existing methods.",
+                "predicted_comment": "Lack of comparison with other state-of-the-art methods. The authors should compare their method with other relevant methods in the field. The authors should provide a more detailed discussion on the advantages and limitations of their method compared to others."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper contributes by extending DPS into an active/sequential learning framework achieving significant performance gains over DPS, mainly on toy problems. However, there is room for more extensive experimental validation, perhaps beyond MRI.",
+                "predicted_comment": "The experimental results may not be sufficient to fully validate the proposed method. The authors should conduct more extensive experiments on a wider range of datasets. The authors should provide more detailed analysis of their experimental results."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper could be better connected with existing literature on contextual bandit, such as contextual bandits with context uncertainties or Partially Observable MDPs.",
+                "predicted_comment": "The paper lacks a comprehensive literature review. The authors should provide a more detailed discussion of the related work in the field of machine learning and communication networks. The authors should compare their work with other existing methods and highlight the advantages of their proposed method. The authors should discuss the limitations of the existing methods and how their proposed method addresses these limitations."
+            }
+        ],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper could benefit from more detailed discussions in certain areas to improve clarity and understanding.",
+                "predicted_comment": "The paper is highly technical and may be difficult for readers without a strong background in machine learning to understand. The authors could provide a more accessible explanation of their method and its significance. The paper could benefit from a clearer presentation of the main ideas and results."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The methodologies of the experiments are difficult to follow, making it hard to link the results back to intuition or interpretation. More detailed descriptions or an algorithm box in the main text could help address this.",
+                "predicted_comment": "The paper is highly technical and may be difficult for readers without a strong background in machine learning to understand. The authors could provide a more accessible explanation of their method and its significance. The paper could benefit from a clearer presentation of the main ideas and results."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper does not convincingly demonstrate model novelty or significant improvement to the state-of-the-art on the provided baseline.",
+                "predicted_comment": "The paper may not provide enough evidence to support its claims. More experimental results or case studies could be provided to support the claims made in the paper. The paper could provide a more detailed analysis of the results, discussing why the model performs well in certain scenarios and not in others."
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper lacks a comprehensive comparison with prior work, making the contributions over previous work hard to assess.",
+                "predicted_comment": "The paper may lack a thorough comparison with other related works. It would be beneficial to see a more detailed comparison with other models that leverage the abstract syntax structure of code. The paper could provide a more in-depth discussion on how GRAPHIX improves upon or differs from these models."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper does not provide information on the efficiency of the proposed method, especially when compared with other works.",
+                "predicted_comment": "The paper does not discuss the computational efficiency of the proposed approach. It would be useful to know how the proposed approach compares with existing methods in terms of computational cost, particularly for larger datasets. The authors could also discuss potential strategies for scaling their approach to larger point clouds."
+            },
+            {
+                "reference_id": 4,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not clarify whether the proposed method can be extended to larger point clouds. It is also unclear what the definition of 'small point clouds' is. An experiment on 3D point cloud classification, such as the popularly used Modelnet 40, is recommended.",
+                "predicted_comment": "The paper does not discuss the computational efficiency of the proposed approach. It would be useful to know how the proposed approach compares with existing methods in terms of computational cost, particularly for larger datasets. The authors could also discuss potential strategies for scaling their approach to larger point clouds."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The proposed architecture is limited to 'small point clouds' without clear explanation. If the statement about the computational complexity is the reason, the connection to it should be clarified.",
+                "predicted_comment": "The paper does not discuss the computational efficiency of the proposed approach. It would be useful to know how the proposed approach compares with existing methods in terms of computational cost, particularly for larger datasets. The authors could also discuss potential strategies for scaling their approach to larger point clouds."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 0,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The interpretation of the linear combination in geometric algebra is not trivial. The paper lacks the interpretation, justification, and discussion about the attention mechanism in geometric algebra.",
+                "predicted_comment": "The paper's mathematical complexity may limit its accessibility to a broader audience. Some sections, particularly those detailing the geometric algebra and attention mechanisms, may be difficult to follow for readers without a strong background in these areas. The authors could consider providing a more intuitive explanation of these concepts to make the paper more accessible."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not provide comparisons with other architecture search algorithms for knowledge distillation or surrogate functions, therefore the introduction of a new framework may not be warranted under the claims of the authors.",
+                "predicted_comment": "The paper does not provide a clear comparison with other KD-NAS approaches. It would be beneficial to see a direct comparison with other methods that combine KD and NAS. The authors should provide a more detailed discussion on how their method differs from these approaches."
+            }
+        ],
+        [
+            {
+                "reference_id": 8,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The use of KD on NAS introduces additional computational cost, but this is not clearly compared quantitatively.",
+                "predicted_comment": "The paper does not discuss the computational cost of the proposed method. While the paper mentions that AutoKD is more sample efficient, it does not provide information on the computational cost. The authors should provide a detailed analysis of the computational cost of AutoKD compared to other methods."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The differences between the proposed method and existing methods are not clearly highlighted.",
+                "predicted_comment": "The paper does not provide a clear comparison with other KD-NAS approaches. It would be beneficial to see a direct comparison with other methods that combine KD and NAS. The authors should provide a more detailed discussion on how their method differs from these approaches."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The purpose of some experiments is unclear. It would be more beneficial to compare AutoKD with earlier KD-NAS approaches instead of NAGO to show the impact of KD on NAS.",
+                "predicted_comment": "The paper does not provide a clear comparison with other KD-NAS approaches. It would be beneficial to see a direct comparison with other methods that combine KD and NAS. The authors should provide a more detailed discussion on how their method differs from these approaches."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 3,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The manuscript should clarify why the authors chose the yarn-based method, how they plan to use this simulator, and where they see the simulator fits in. The motivation for using yarn-level, which is originally designed for fine details but applied on over-simplified models, is not convincing.",
+                "predicted_comment": "The paper may not sufficiently discuss the broader implications or potential applications of the proposed model. For instance: The paper could discuss how the proposed model could be used in other fields or applications. The paper could explore potential future developments or improvements to the model."
+            }
+        ],
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper lacks real-world experiments, and the range of simulated experiments is not very wide, making it difficult to judge the expressivity / gamut of the model.",
+                "predicted_comment": "The paper may lack sufficient experimental validation of the proposed model. For example: The paper could benefit from more extensive testing on a wider range of fabrics and physical conditions. The paper could provide more detailed comparisons with existing models, including a discussion of their limitations and how the proposed model addresses these."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper does not comment on the computational cost and comparisons to baseline methods. It would be beneficial to provide such information in the main paper, especially when compared with non-differentiable simulator [Cirio et al., 2014] and prior work on differentiable cloth simulation [Liang et al., In NeurIPS 2019].",
+                "predicted_comment": "The paper may lack sufficient experimental validation of the proposed model. For example: The paper could benefit from more extensive testing on a wider range of fabrics and physical conditions. The paper could provide more detailed comparisons with existing models, including a discussion of their limitations and how the proposed model addresses these."
+            }
+        ],
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The experiments focus only on simulated woven cloth, and the models are heavily designed. This raises questions about the generalizability of the proposed method to other materials and weaving structures.",
+                "predicted_comment": "The paper may lack sufficient experimental validation of the proposed model. For example: The paper could benefit from more extensive testing on a wider range of fabrics and physical conditions. The paper could provide more detailed comparisons with existing models, including a discussion of their limitations and how the proposed model addresses these."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "While performance seems generally higher, the limitations of the proposed N-CODE method are not clear.",
+                "predicted_comment": "The paper may not provide enough details about the implementation of their method. The authors should provide more details about the implementation of their method, including the specific algorithms used and any assumptions made. The authors should also discuss any limitations or potential issues with their implementation."
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper is closely related to other works that have also focused on making the weights of neural ODEs time dependent. A more thorough discussion of the differences between these models is needed to better understand where the novelty/contribution comes in.",
+                "predicted_comment": "The paper may lack sufficient comparison with other related works or methods. The authors should provide a more comprehensive review of related works and compare their method with these works in terms of performance and applicability. The authors should also discuss how their method differs from these related works in terms of approach and results."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The experiments focus only on selecting a single initial learning rate, which is less interesting because normally a learning rate scheduler that changes over time is used. The experiment does not consider different types of learning rate schedulers for comparisons.",
+                "predicted_comment": "The paper focuses solely on the initial learning rate, which may limit the applicability of the proposed method. The authors should consider extending their approach to other hyper-parameters. The impact of focusing only on the initial learning rate on the overall performance of the model is not thoroughly discussed."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The work would be more impactful if it demonstrated improvement in other hyper-parameter optimizations such as weight decay and convolution filter size and channels.",
+                "predicted_comment": "The paper focuses solely on the initial learning rate, which may limit the applicability of the proposed method. The authors should consider extending their approach to other hyper-parameters. The impact of focusing only on the initial learning rate on the overall performance of the model is not thoroughly discussed."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The learning rate is just a scalar, so a simple grid search could be used to coarsely find a good learning rate and then refine it. This makes the focus on learning rate less impactful.",
+                "predicted_comment": "The paper focuses solely on the initial learning rate, which may limit the applicability of the proposed method. The authors should consider extending their approach to other hyper-parameters. The impact of focusing only on the initial learning rate on the overall performance of the model is not thoroughly discussed."
+            }
+        ],
+        [
+            {
+                "reference_id": 9,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "In your conclusion you discuss that you could extend your tuning algorithm to multiple hyperparameters, and I believe in order to truly demonstrate its capabilities this would be required.",
+                "predicted_comment": "The paper focuses solely on the initial learning rate, which may limit the applicability of the proposed method. The authors should consider extending their approach to other hyper-parameters. The impact of focusing only on the initial learning rate on the overall performance of the model is not thoroughly discussed."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not compare the proposed algorithm to existing state-of-the-art methods, which would be useful for a solid paper.",
+                "predicted_comment": "The paper lacks a thorough comparison with state-of-the-art HPO methods. The authors should include a more comprehensive comparison with existing methods to highlight the advantages of their approach."
+            }
+        ],
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The reviewer suggests that it may be more convincing if the whole parameters are chosen together, not just the initial learning rate.",
+                "predicted_comment": "The paper focuses solely on the initial learning rate, which may limit the applicability of the proposed method. The authors should consider extending their approach to other hyper-parameters. The impact of focusing only on the initial learning rate on the overall performance of the model is not thoroughly discussed."
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 2,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper only compares the algorithm with the baseline. The authors should discuss if there are any other works about tuning the initial learning rate, or if this paper is the first of its kind.",
+                "predicted_comment": "The paper lacks a thorough comparison with state-of-the-art HPO methods. The authors should include a more comprehensive comparison with existing methods to highlight the advantages of their approach."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper should provide a reasonable explanation for why the initial learning rate influences the testing accuracy, not just the convergence rate for training loss.",
+                "predicted_comment": "The paper focuses solely on the initial learning rate, which may limit the applicability of the proposed method. The authors should consider extending their approach to other hyper-parameters. The impact of focusing only on the initial learning rate on the overall performance of the model is not thoroughly discussed."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper's comparison with prior works like Kaiser et al. (2020) and Hafner et al. (2021) may not be fair, as the presented method assumes that environment observations are pre-factored and pre-processed into object components, which is a non-trivial task that might explain the sample inefficiency of earlier methods.",
+                "predicted_comment": "The paper assumes that the agent can individuate objects in its environment, which may not always be the case in real-world applications. Discuss the potential limitations of this assumption and how it might affect the generalizability of the method. Consider whether the authors provide any solutions or workarounds for situations where this assumption does not hold."
+            }
+        ],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper lacks numerical results and comparisons with competing methods for building attacks in the literature.",
+                "predicted_comment": "The paper does not provide a clear comparison with existing methods for privacy auditing. The authors could consider including a more detailed comparison with existing methods, highlighting the advantages and limitations of their proposed approach."
+            }
+        ],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper uses a very small number of training tasks - only 4. It's unclear if using more training tasks would improve the generalization of single-task methods like DeepMDP.",
+                "predicted_comment": "The experimental evaluation could be more comprehensive. The authors should consider including more diverse tasks and environments in their experiments to demonstrate the robustness of their method. The paper could benefit from a more detailed analysis of the experimental results, including a discussion on why the proposed method outperforms the baselines."
+            },
+            {
+                "reference_id": 6,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not convincingly demonstrate that the structural assumptions on the MDP used by the proposed algorithm yield performance improvement.",
+                "predicted_comment": "The paper assumes a block structure for the observation space, which may not hold in many real-world scenarios. The authors should discuss the implications of this assumption and how it might limit the applicability of their method. It would be beneficial to see some analysis or discussion on how the method performs when this assumption is relaxed."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The performance of the proposed model is promising, but still below the baselines.",
+                "predicted_comment": "The paper might lack a thorough comparison with other state-of-the-art models. It would be beneficial to see a more detailed comparison, including both quantitative and qualitative analysis. The authors should consider including more comparative results, such as side-by-side audio samples or additional benchmark scores."
+            }
+        ],
+        [],
+        [],
+        []
+    ]
+]
