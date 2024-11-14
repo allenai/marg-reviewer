@@ -1,0 +1,854 @@
+[
+    [
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The motivations for the paper are not well discussed.",
+                "predicted_comment": "The introduction provides a good overview of the limitations of existing methods, such as the latent information loss problem in Graph Convolutional Networks (GCNs) and the static nature of GCNs. However, it could be helpful to elaborate on why these limitations are significant and how they impact the performance of GCNs."
+            },
+            {
+                "reference_id": 7,
+                "predicted_id": 6,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The performance of the model in terms of memory consumption is not completely discussed. Using AM seems to significantly impact the memory consumption and/or the training time of the model.",
+                "predicted_comment": "The paper does discuss the limitations of the study, such as the fact that some datasets either exceed the GPU memory capacity or cost too much time in training. However, it might be beneficial to discuss these limitations in more detail and suggest potential solutions."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 11,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The experimental section could be improved. More details about how the comparison to some baselines was made would be appreciated.",
+                "predicted_comment": "Provide more context on what the baselines are and why the proposed approach outperforms them, including specific performance metrics."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The motivation for the new task proposed in the paper is not clear.",
+                "predicted_comment": "The introduction section provides a good overview of the problem and the proposed solution. However, it could benefit from a more detailed explanation of the Spoken Conversational Question Answering task (SCQA). Specifically, it would be helpful to elaborate on how the SCQA task enables QA systems to model complex dialogues flow given the speech utterances and text corpora, and why this is an important advancement in the field. (Agent 1)"
+            }
+        ],
+        [],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper did not compare to any other active sampling strategies. The authors made no effort to replicate existing methods.",
+                "predicted_comment": "Provide more specific examples or case studies to illustrate how A-DPS outperforms other sampling pattern selection methods, including a comparison of their performance in the same scenarios and a discussion of the reasons for the differences in performance."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The proposed approach appears to be incremental: ADPS adds a simple sequential update structure (of a context vector) to DPS, which can be described by only two equations (6 and 7). The simplicity of the changes proposed (over DPS) is not a limitation, but it could be accompanied by an in-depth theoretical analysis, a convincing qualitative discussion or extensive experiments demonstrating the practical relevance of the proposed approach.",
+                "predicted_comment": "Explain in more detail how the Active Deep Probabilistic Subsampling (A-DPS) method improves upon the DPS method, including a comparison of their performance in various scenarios such as the MNIST classification at high subsampling rates and a discussion of the reasons for the differences in performance."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper contributes by extending DPS into an active/sequential learning framework achieving significant performance gains over DPS, mainly on toy problems. However, there is room for more extensive experimental validation, perhaps beyond MRI.",
+                "predicted_comment": "Provide more specific examples or case studies to illustrate how A-DPS outperforms other sampling pattern selection methods, including a comparison of their performance in the same scenarios and a discussion of the reasons for the differences in performance."
+            }
+        ],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "It is unclear what happens when the MNIST sampling ratio in Figure 3a is further increased. It would be helpful to know if A-DPS consistently outperforms DPS in low sampling ratio regimes.",
+                "predicted_comment": "Explain in more detail how the Active Deep Probabilistic Subsampling (A-DPS) method improves upon the DPS method, including a comparison of their performance in various scenarios such as the MNIST classification at high subsampling rates and a discussion of the reasons for the differences in performance."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper lacks comparison to other active sub-sampling schemes, such as those proposed by Zhang et al., 2019 and Jin et al., 2019. It would be beneficial to see if the proposed method produces better results than these existing methods.",
+                "predicted_comment": "Provide more specific examples or case studies to illustrate how A-DPS outperforms other sampling pattern selection methods, including a comparison of their performance in the same scenarios and a discussion of the reasons for the differences in performance."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The algorithm description in section 3 is very abstract. The paper would benefit from a running example and a dedicated section and pseudo-code describing the algorithm and how it can be instantiated in different experimental settings.",
+                "predicted_comment": "The introduction could benefit from a more detailed explanation of the proposed algorithm and more context on why the current approaches to meta-learning are limited. Specifically, the paper should elaborate on the high computational costs and the assumption that optimizing performance after a certain number of applications of the update rule will yield improved performance for the remainder of the learner's lifetime. The paper should also discuss how these limitations lead to degraded lifetime performance, collapsed exploration, biased learner updates, and poor generalisation performance. Additionally, the paper should provide a clearer explanation of the benefits of the proposed algorithm, including how it allows for the extension of the effective meta-learning horizon without requiring backpropagation through all updates and how it allows for control over the optimisation landscape. The paper should also discuss the potential performance and efficiency gains in multi-task meta-learning that can be achieved with the proposed algorithm. (Agent 1)"
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The methodologies of the experiments are difficult to follow, making it hard to link the results back to intuition or interpretation. More detailed descriptions or an algorithm box in the main text could help address this.",
+                "predicted_comment": "The methodology section could benefit from a more structured presentation. More context or background information on the BMG approach, including how it focuses on the effect of bootstrapping and how it compares with the MG approach in an online setup, would be helpful. The paper should also provide more details on the specific tasks used in the experiments, such as the tabular grid-world with two items to collect and the Atari game. The paper should also discuss the experimental setup, including how the BMG approach was tested in two main settings: the Atari game and a multi-task few-shot learning setting. The paper should also discuss how the results were evaluated, including how performance and efficiency were measured. (Agent 3)"
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The training procedure for BMG in the multi-task few-shot learning experiment should be formally described in the main text.",
+                "predicted_comment": "The methodology section could benefit from a more structured presentation. More context or background information on the BMG approach, including how it focuses on the effect of bootstrapping and how it compares with the MG approach in an online setup, would be helpful. The paper should also provide more details on the specific tasks used in the experiments, such as the tabular grid-world with two items to collect and the Atari game. The paper should also discuss the experimental setup, including how the BMG approach was tested in two main settings: the Atari game and a multi-task few-shot learning setting. The paper should also discuss how the results were evaluated, including how performance and efficiency were measured. (Agent 3)"
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper could benefit from more detailed discussions in certain areas to improve clarity and understanding.",
+                "predicted_comment": "The discussion section could benefit from a summary of the key findings at the beginning, including how BMG outperforms MG for a given horizon without backpropagating through all updates. The paper should also include brief explanations of certain concepts, visual representations of certain concepts, such as Figure 2, and a table comparing the computational properties of STACX and BMG. The paper should also provide a brief explanation of the Few-Shot MiniImagenet setup and its significance. The paper should also consolidate the discussion into a single section, include a glossary or definitions of key terms, and discuss the limitations and potential areas for future research, such as exploring other forms of bootstraps. (Agent 5)"
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper could benefit from more detailed discussions in certain areas to improve clarity and understanding.",
+                "predicted_comment": "The introduction could benefit from a more detailed explanation of the proposed algorithm and more context on why the current approaches to meta-learning are limited. Specifically, the paper should elaborate on the high computational costs and the assumption that optimizing performance after a certain number of applications of the update rule will yield improved performance for the remainder of the learner's lifetime. The paper should also discuss how these limitations lead to degraded lifetime performance, collapsed exploration, biased learner updates, and poor generalisation performance. Additionally, the paper should provide a clearer explanation of the benefits of the proposed algorithm, including how it allows for the extension of the effective meta-learning horizon without requiring backpropagation through all updates and how it allows for control over the optimisation landscape. The paper should also discuss the potential performance and efficiency gains in multi-task meta-learning that can be achieved with the proposed algorithm. (Agent 1)"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 6,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The pre-training regime is not particularly novel. The authors suggest deleting elements of subtrees from existing code and reconstructing them, which is not sufficiently novel.",
+                "predicted_comment": "1. Provide a more detailed explanation of how the novel pre-training technique for tree-structured data differs from existing methods. This will help readers understand the novelty of the pre-training technique."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not convincingly demonstrate model novelty or significant improvement to the state-of-the-art on the provided baseline.",
+                "predicted_comment": "1. Provide a more detailed explanation of why current methods are insufficient and how GRAPHIX addresses these shortcomings. This will help readers understand the motivation behind the development of GRAPHIX."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "Quantitative evaluations show only marginal improvement at best in comparison to the large pre-trained models.",
+                "predicted_comment": "3. Provide a more detailed comparison between other models and GRAPHIX to highlight its unique advantages. This will help readers understand what sets GRAPHIX apart from other models."
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper lacks a comprehensive comparison with prior work, making the contributions over previous work hard to assess.",
+                "predicted_comment": "3. Provide a more detailed comparison between other models and GRAPHIX to highlight its unique advantages. This will help readers understand what sets GRAPHIX apart from other models."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The authors defined four functions, V, M, J, and S. However, another function R is defined later. Why do the authors distinguish R from the others? Are the four functions cover everything sufficiently? Justification is required.",
+                "predicted_comment": "The paper mentions the use of different functions (V, S, R, M, J) in the geometric algebra attention models, but it does not clearly explain how these functions are chosen or optimized. More information on this would be beneficial. A section discussing the selection and optimization of these functions would strengthen the methodology."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "Some important training details, such as the clustering-based prediction from the first step ERM model, are buried in the appendix. These details seem crucial to the functioning of the method and should be discussed in the main body, possibly with an ablation study.",
+                "predicted_comment": "Please elaborate on the specific model architectures used in the second stage of the procedure, including the LeNet-5 CNN, ResNet-50 CNN, and BERT model. Additionally, provide more insight into the choice of training hyperparameters such as batch size, temperature, contrastive weight, optimizer, learning rate, momentum, and weight decay. Discuss the results of this stage in relation to the worst-group and average test set results reported in Table 1. Furthermore, could you delve deeper into the process of validating the design choices of CNC and explain why ERM-guided contrastive sampling is crucial for improving worst-group accuracy?"
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 5,
+                "predicted_id": 4,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "On the CIFAR10 dataset, the compared models have fewer parameters than that of NAGO for AutoKD, making it hard to say that AutoKD outperforms them.",
+                "predicted_comment": "The paper should explain why AutoKD, despite outperforming other methods, uses a larger number of parameters for CIFAR10. This should include a discussion of the default networks in the NAGO search space and how AutoKD manages to outperform more advanced KD approaches while requiring fewer parameters. This will help to provide a more balanced view of the performance and efficiency of AutoKD."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The differences between the proposed method and existing methods are not clearly highlighted.",
+                "predicted_comment": "The methodology section should include a comparison with other existing solutions such as pruning-based methods, quantization methods, low-rank factorization approaches, and other Knowledge Distillation (KD) methods. This comparison should highlight the advantages of AutoKD over these methods, particularly in terms of its ability to find the optimal student architecture. This will help to position AutoKD within the broader context of model compression techniques and underscore its unique contributions."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 9,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The motivation for using a yarn-level simulator is unclear. The experiments are too coarse to show the advantages of more accurate collision handling and detailed presentation, which are the reasons for proposing a yarn-level simulation. A more valid explanation for motivation or a set of better results that are more complex than 25*25 is expected.",
+                "predicted_comment": "Provide more details about the unique features of the yarn-level differentiable fabric simulator and how it differs from existing fabric simulators. (Agent 3)"
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 23,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The design process of the model is heuristic and lacks analysis or ablation study to justify the design choices made.",
+                "predicted_comment": "Provide more justification for the choice of different forces and models. (Agent 6)"
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The experiments focus only on simulated woven cloth, and the models are heavily designed. This raises questions about the generalizability of the proposed method to other materials and weaving structures.",
+                "predicted_comment": "Provide more details on how the method can be readily extended for general composite materials with mesh structures. (Agent 2)"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 6,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper lacks a deeper understanding of why a linear learning rate schedule might work better. The authors attempt to provide an explanation from the relationship between learning rate and gradient magnitudes, but no clear conclusion is given. The paper should investigate when no weight decay is used and whether there is any correlation between the learning rate and gradient norms.",
+                "predicted_comment": "Provide more detail on how the linear schedule was derived and why it works better than other schedules. Discuss the properties of the linear schedule that make it outperform other schedules under almost all budgets."
+            },
+            {
+                "reference_id": 9,
+                "predicted_id": 6,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The authors' rebuttal did not fully address the concern about the lack of understanding of why the linear scaling schedule is better.",
+                "predicted_comment": "Provide more detail on how the linear schedule was derived and why it works better than other schedules. Discuss the properties of the linear schedule that make it outperform other schedules under almost all budgets."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 6,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper lacks a sound theory explaining why linear decay or other smooth decay methods work well.",
+                "predicted_comment": "Provide more detail on how the linear schedule was derived and why it works better than other schedules. Discuss the properties of the linear schedule that make it outperform other schedules under almost all budgets."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 2,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The algorithm introduces new hyperparameters, such as alpha and the 'rate of change plateaus'. The paper should explain how these hyperparameters are chosen and how they influence the result.",
+                "predicted_comment": "A more detailed discussion on the choice of grid space and rate of change functions in the autoHyper algorithm, and how they affect the final generated learning rate, would be beneficial. This could include an explanation of how different choices might impact the performance of the algorithm. (Agent 1)"
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper only compares the algorithm with the baseline. The authors should discuss if there are any other works about tuning the initial learning rate, or if this paper is the first of its kind.",
+                "predicted_comment": "The introduction could benefit from a more detailed explanation of the current methodologies and their limitations in Hyper-Parameter Optimization (HPO) for Deep Neural Network (DNN) training. This would provide a clearer context for the study and help readers understand the motivation behind the proposed method. (Agent 1)"
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper lacks numerical results and comparisons with competing methods for building attacks in the literature.",
+                "predicted_comment": "From Agent 2:\n1. Could the authors provide more detailed explanations for the equations used in the attacks? This would help readers understand the mathematical basis of the attacks.\n2. The results section could be enhanced with more visual aids, such as graphs or charts, to help illustrate the results of the attacks.\n3. A more detailed comparison of the different attacks would be beneficial. This could include a discussion of the strengths and weaknesses of each attack."
+            }
+        ],
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "A similar usage of the Transformer has already been demonstrated in the vision-and-language navigation task. The referenced paper also shows that pre-training of navigation tasks using Transformers can help to boost performance.",
+                "predicted_comment": "Provide more justification for why the pre-training scheme for the VT is necessary and how it improves the performance of the VT. Specifically, it would be helpful to explain how the pre-training scheme addresses the difficulty of training deep Visual Transformers, especially when the supervision signals are weak. This could include a discussion of how the pre-training scheme associates the visual representations with navigation signals, thus facilitating navigation policy learning."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The introduction of the paper is difficult to understand as it discusses details such as the difference between DETR and Faster RCNN or difficulty of training the transformers without providing a high-level overview of the proposed method.",
+                "predicted_comment": "The introduction could benefit from a more detailed explanation of how the Visual Transformer Network (VTNet) differs from previous methods. Specifically, it would be helpful to highlight how VTNet exploits relationships among all object instances in a scene and emphasizes the spatial locations of objects and image regions, which are crucial for learning directional navigation signals. This would provide readers with a clearer understanding of the unique aspects of VTNet."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not provide a satisfactory explanation for why nothing is learned without the imitation pre-training.",
+                "predicted_comment": "Provide more justification for why the pre-training scheme for the VT is necessary and how it improves the performance of the VT. Specifically, it would be helpful to explain how the pre-training scheme addresses the difficulty of training deep Visual Transformers, especially when the supervision signals are weak. This could include a discussion of how the pre-training scheme associates the visual representations with navigation signals, thus facilitating navigation policy learning."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 4,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper does not clearly demonstrate if any insight is gained from the theoretical analysis, as the derivation of value and sample complexity bounds for approximate bisimulation was already performed in Gelada et al. 2019.",
+                "predicted_comment": "The paper discusses value bounds and expected error bounds in sections B.1 and B.2, but it's unclear how these concepts relate to the overall goals of the research. Providing more context or explanation would help readers understand the implications of these results. The paper provides theoretical analysis and proofs for the HiP-MDP and HiP-BMDP settings, showing improvements in sample complexity over prior work, but it does not clearly explain how these results relate to the overall goals of the research."
+            }
+        ],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 5,
+                "predicted_id": 9,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "There is concern about the selection of initial radius $R_0$ and its decay policy, as these parameters should be dataset dependent due to different numbers of categories and the densities of class distributions.",
+                "predicted_comment": "Could you provide a more detailed discussion on the impact of the radius decay on the test accuracy? How does changing the radius decay value affect the performance of the method?"
+            },
+            {
+                "reference_id": 5,
+                "predicted_id": 7,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "There is concern about the selection of initial radius $R_0$ and its decay policy, as these parameters should be dataset dependent due to different numbers of categories and the densities of class distributions.",
+                "predicted_comment": "Could you provide more justification or explanation for the choice of the 'simple strategy called radius decay'? How does this strategy contribute to the overall performance of the method?"
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 5,
+                "predicted_id": 10,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "In practice, defining mutually exclusive class partitions to form the required class tree in Figure 1 can be non-trivial or even impossible. The authors should discuss how different class hierarchies affect the classification accuracy, for example, in Table 2.",
+                "predicted_comment": "Could you elaborate on why the number of levels in the hierarchy tree affects the accuracy? What is the optimal number of levels and why?"
+            }
+        ],
+        [
+            {
+                "reference_id": 10,
+                "predicted_id": 11,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not formally compare Riemannian gradient and 'projected gradient' in Figure 2 right.",
+                "predicted_comment": "Could you provide more information on how the Resnet18 architecture with Riemannian gradient descent was used to optimize the spherical fully-connected layer? How does this compare to other optimization methods?"
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not provide a clear rationale or related work for the use of radius decay in Section 3.1.",
+                "predicted_comment": "Could you provide more justification or explanation for the choice of the 'simple strategy called radius decay'? How does this strategy contribute to the overall performance of the method?"
+            },
+            {
+                "reference_id": 4,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The optimization method used for learning other layers is not specified.",
+                "predicted_comment": "Please provide more details on how the optimization strategies were implemented. How do they compare to each other in terms of performance and complexity?"
+            }
+        ]
+    ],
+    [
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The reason behind using an adversarial loss is not adequately explained in the paper. A few lines before section 2.1 would help clarify that.",
+                "predicted_comment": "Provide an in-depth explanation of the use of adversarial feedback in the form of a spectrogram discriminator in the EATS model. Discuss the architecture of the discriminator and its modifications to suit the resolution of the spectrogram inputs. Also, elaborate on the use of the soft dynamic time warping (DTW) procedure for the spectrogram prediction loss and its impact on training time."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 9,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The reason behind using an adversarial loss is not adequately explained in the paper. A few lines before section 2.1 would help clarify that.",
+                "predicted_comment": "Provide a more detailed explanation of the adversarial approach used in the model."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The authors should provide brief guidelines for readers trying to reimplement EATS, such as how to tune the hyperparameters.",
+                "predicted_comment": "Provide a clear explanation of how the parameters (e.g., \u03c4, \u03bb pred, \u03bb length) were chosen or optimized."
+            }
+        ],
+        []
+    ]
+]

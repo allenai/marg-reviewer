@@ -65,9 +65,58 @@ def reviewgen_v21_bare_parallel_chunked(config, paper_chunks, taxonomy_element, 
     logger.info(merged_review)
     return merged_review
 
+def reviewgen_v22_parallel_chunked(config, paper_chunks, taxonomy_element, prompts):
+    rts = []
+    for chunk in paper_chunks:
+        bot = GptChatBot(
+            config["gpt3_cache_db_path"],
+            model=config["gpt_model"],
+            system_prompt=prompts["system_prompt_v1"],
+            max_tokens=config["gpt_default_max_length"],
+        )
+        bot.paper_chunk = chunk
+        bot.messages.append({"role": "user", "content": prompts["task_prompt_set1_v1"].format(source_paper_chunk=bot.paper_chunk)})
+        bot.messages.append({"role": "assistant", "content": "Ready"})
+        bot.chat(prompts["task_prompt_set1_v2"].format(comment_type=taxonomy_element))
+        rt, resp = bot.chat(prompts["task_prompt_set1_v3"])
+        rts.append(rt)
+        # print(rt)
+    bot = GptChatBot(
+        config["gpt3_cache_db_path"],
+        model=config["gpt_model"],
+        system_prompt=prompts["combiner_system_prompt"],
+        max_tokens=config["gpt_default_max_length"],
+    )
+    merged_review, resp = bot.chat(prompts["combiner_task_prompt"].format(reviewlists="\n-----\n".join(rts)))
+    cur_review = merged_review
+    if prompts.get("task_prompt_set2_v1", None) is not None:
+        for chunk in paper_chunks:
+            bot = GptChatBot(
+                config["gpt3_cache_db_path"],
+                model=config["gpt_model"],
+                system_prompt=prompts["system_prompt_v2"],
+                max_tokens=config["gpt_default_max_length"],
+            )
+            bot.paper_chunk = chunk
+            bot.messages.append({"role": "user", "content": prompts["task_prompt_set2_v1"].format(source_paper_chunk=bot.paper_chunk)})
+            bot.messages.append({"role": "assistant", "content": "Ready"})
+            bot.chat(prompts["task_prompt_set2_v2"].format(comment_type=taxonomy_element, review_comments=cur_review))
+            rt, resp = bot.chat(prompts["task_prompt_set2_v3"])
+            # if chunk == paper_chunks[-1]:
+            #    rt, resp = bot.chat("Identify one particular comment that is the most important for improving the paper.  Carefully consider the paper's goals and claims and pick the comment that represents the greatest weakness of the paper.")
+            cur_review = rt
+            logger.info(rt)
+    else:
+        logger.warning("No refinement prompt was given; skipping refinement stage")
+        cur_review, _ = bot.chat(
+            prompts.get(
+                "task_prompt_set2_v3", "Write the final list of review comments as a JSON list of strings.  Do not include any additional commentary."
+            )
+        )
+    return cur_review
+
 
 def reviewgen_v24_multi_agent(config, paper_chunks, taxonomy_element, prompts):
-    global doc_edits_modifications
 
     extra_agents = config["experts"]
 
@@ -111,6 +160,9 @@ def reviewgen_v24_multi_agent(config, paper_chunks, taxonomy_element, prompts):
         logger.exception("FAILED TO PARSE MODEL JSON OUTPUT")
         review1 = "null"
 
+    if config.get("skip_refinement"):
+        return review1
+
     final_comments = []
 
     for comment in json.loads(review1):
@@ -148,6 +200,73 @@ def reviewgen_v24_multi_agent(config, paper_chunks, taxonomy_element, prompts):
                 final_comments.append(comment)
     return json.dumps([x["revised_comment"] for x in final_comments if x["revised_comment"] is not None])
 
+def reviewgen_v25_generic_multi_agent(config, doc_id, paper_chunks, taxonomy_element, prompts):
+    extra_agents = config["experts"]
+
+    swarm = MultiAgentGroup(
+        config,
+        None,
+        config["gpt_model"],
+        paper_chunk_size=config["paper_chunk_size"],
+        prompts=prompts,
+        max_tokens=config["gpt_default_max_length"],
+        quiet=False,
+        doc_mods=None,
+        use_history_pruning=False,
+        taxonomy="",
+        master_chunk_type=config["master_chunk_type"],
+        extra_bots=extra_agents,
+        raw_paper_chunks=paper_chunks,
+        # color_format='html',
+    )
+    expert_name_substitutions = {x["name"]: swarm.extra_bot_experts[eidx].agent_name for eidx, x in enumerate(config["experts"])}
+    master_task_prompt = prompts["task_prompt_set1_v1"].format(comment_type=taxonomy_element, **expert_name_substitutions)
+    rt, resp = swarm.ask_swarm_question(master_task_prompt, pre_prompt="")
+    tmpbot = GptChatBot(
+        config["gpt3_cache_db_path"],
+        model="gpt-4-0613",
+        system_prompt='Instructions:\nYou will be given an output from a review-generating AI.  Your job is to determine whether the output contains a finalized list of review comments.  If so, output the review comments verbatim in a JSON list of strings.  If not, write "No comments."  Note that if the list appears incomplete--e.g., it starts with a number other than 1, etc--you should write "No comments." anyway.',
+        max_tokens=2048,
+    )
+    rt, resp = tmpbot.chat("Output:\n" + rt)
+    if rt.strip().strip('"') == "No comments.":
+        rt, resp = swarm.ask_swarm_question(prompts["task_prompt_set1_v2"], pre_prompt="")
+        try:
+            _ = json.loads(rt)
+        except json.decoder.JSONDecodeError:
+            rt, resp = swarm.ask_swarm_question(prompts["task_prompt_set1_v2"] + "\n\nMake sure to use the specified JSON format.", pre_prompt="")
+    else:
+        print(rt)
+    try:
+        review1 = rt[rt.index("[") :].strip().strip("`")
+    except Exception as e:
+        logger.exception("FAILED TO PARSE MODEL JSON OUTPUT")
+        review1 = "[]"
+
+    final_comments = []
+
+    swarm = MultiAgentGroup(
+        config,
+        None,
+        config["gpt_model"],
+        paper_chunk_size=config["paper_chunk_size"],
+        prompts=prompts,
+        max_tokens=config["gpt_default_max_length"],
+        quiet=False,
+        doc_mods=None,
+        use_history_pruning=True,
+        master_chunk_type=config["master_chunk_type"],
+        raw_paper_chunks=paper_chunks,
+        taxonomy="",
+    )
+    rt, resp = swarm.ask_swarm_question(
+        prompts["task_prompt_set2_v1"].format(comment_type=taxonomy_element, review_comments=review1),
+        pre_prompt="",
+    )
+    rt, resp = swarm.ask_swarm_question(prompts["task_prompt_set2_v2"], pre_prompt="")
+    final_comments = json.loads(rt)
+    return json.dumps(final_comments)
+
 
 def reviewgen_v26_specialized_multi_agent(config, paper_chunks, taxonomy_element, prompt_sets, doc_id=""):
     comments_by_type = dict()
@@ -182,11 +301,10 @@ def reviewgen_v26_specialized_multi_agent(config, paper_chunks, taxonomy_element
                     ).replace("\n", "<br>"),
                 )
                 continue
-                # raise e
-                # return "[]"
         comments_by_type[pset["name"]] = json.loads(rev)
 
-    final_rev = json.dumps(list(itertools.chain(*comments_by_type.values())))
+    comments_by_type['all'] = list(itertools.chain(*comments_by_type.values()))
+    final_rev = json.dumps(comments_by_type)
     return final_rev
 
 
@@ -386,6 +504,8 @@ def make_reviews(pdf_hash):
                     paper_chunks, s2orc1 = get_paper_chunks(pdf_path, subconfig)
                     cur_chunk_size = subconfig["paper_chunk_size"]
                 review = make_review(subconfig, paper_chunks, s2orc1, doc_id=pdf_hash)
+                if isinstance(review, dict):
+                    review = list(itertools.chain(*review.values()))
                 if review is not None and len(review) != 0:
                     cur.execute(
                         'INSERT INTO reviews (pdf_hash, method, review_json, completed_time) VALUES (?, ?, ?, datetime("now"))',
@@ -403,8 +523,12 @@ def make_review(config, paper_chunks, s2orc1, doc_id=""):
     try:
         if config["model_type"] == "gpt_bare_independent_chunk":
             rev1 = reviewgen_v21_bare_parallel_chunked(config, paper_chunks, "", config["prompts"])
+        elif config["model_type"] == "gpt_independent_chunk":
+            rev1 = reviewgen_v22_parallel_chunked(config, paper_chunks, "", config["prompts"])
         elif config["model_type"] == "gpt_specialized_multi_agent":
             rev1 = reviewgen_v26_specialized_multi_agent(config, paper_chunks, "", config["prompt_sets"], doc_id=doc_id)
+        elif config["model_type"] == "gpt_generic_multi_agent":
+            rev1 = reviewgen_v25_generic_multi_agent(config, doc_id, paper_chunks, "", config["prompts"])
         elif config["model_type"] == "gpt_liang_etal":
             rev1 = reviewgen_v27_liang_etal(config, s2orc1, config["prompts"])
         else:

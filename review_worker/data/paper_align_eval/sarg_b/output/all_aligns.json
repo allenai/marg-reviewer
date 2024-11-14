@@ -1,0 +1,655 @@
+[
+    [
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The authors' claims are not always supported by the experimental evidence.",
+                "predicted_comment": "The 'AdaGCCN Performance' section presents the results of the experiments, but it lacks a thorough analysis. The authors should discuss the implications of the results and how they support the claims made in the paper."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 10,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The experimental methodology used in the paper is not well detailed, making it difficult to reproduce the reported results.",
+                "predicted_comment": "The 'Evaluation' section could be improved by providing more details about the experimental setup. For example, how were the benchmark datasets chosen? What were the specific parameters used in the experiments?"
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not clearly address why the proposed method of inflating 2D CNN of image for 3D pointcloud works.",
+                "predicted_comment": "The methodology is explained in detail, which is commendable. However, the authors could consider providing a visual representation of the process of converting a 2D ConvNet to a 3D ConvNet. This would help readers better understand the process. More details on the methodology used for the experiments, such as the selection of baselines, the use of ResNet-series models, the use of SGD optimizer, and the use of pretrained models from open sources, should be provided."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper is missing detailed information, making it difficult to follow the process. For example, in Table 1, the performances of pointnet++ and the performances are listed, but it's unclear how the inflation in point net++ is performed.",
+                "predicted_comment": "The authors should provide more details about the datasets used, the version of Pytorch used, the computational resources used, and the preprocessing and post-processing steps. They should also provide more details about the implementation of the ViT models, the PointNet++ pretraining, and the ResNet architecture."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 10,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper should characterize the runtime difference between SRN and SN. It is presently unclear how computationally intensive the method is. What is the difference in time per training iteration? The authors should also indicate their hardware setup and overall training time.",
+                "predicted_comment": "In the Experiments section, provide more details about the experimental setup, such as the hardware used, the duration of the experiments, and any preprocessing steps applied to the datasets."
+            }
+        ],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 13,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper should discuss the importance of the heuristic of changing states when using GP, and how the performance would be affected if a different threshold is used.",
+                "predicted_comment": "Provide more details about how this trigger switch is implemented and how it contributes to the overall performance of the model."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 13,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper should provide insights on why switching actions at some fixed number of frames beats using the Gaussian variance for FVD.",
+                "predicted_comment": "Provide more details about how this trigger switch is implemented and how it contributes to the overall performance of the model."
+            }
+        ],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The problem definition was not clear. A concrete example demonstrating what exactly an algorithm for the problem gets as input and what is its output is missing.",
+                "predicted_comment": "The introduction is comprehensive and provides a good background for the study. However, it might be beneficial to provide a more explicit statement of the research problem and the paper's objectives early in the introduction. This would help to guide the reader through the rest of the paper. Additionally, it would be helpful to provide some examples or case studies to illustrate the challenges faced by traditional mathematicians when using formal systems. The authors should also elaborate on how these issues extend beyond pure mathematics to other STEM fields."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 12,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "Comparisons of different design/hyperparameter choices should be included to help judge the benefit of using learning for belief representation.",
+                "predicted_comment": "In the 'BLUEPRINT TRAINING' section, it would be beneficial to provide a brief discussion on why other designs were not as successful."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 9,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The experiment settings, problem description, and discussions need more elaboration.",
+                "predicted_comment": "To enhance the reproducibility of the study, it would be beneficial to provide more details about the experimental setup, including any parameters used in the LBS method."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 9,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The experimental setup requires significantly more details on the hardware used for training, testing and validating.",
+                "predicted_comment": "To enhance the reproducibility of the study, it would be beneficial to provide more details about the experimental setup, including any parameters used in the LBS method."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 10,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "More detail is required to explain why multi-agent search is not theoretically sound. If the trained model is only accurate for single agent search, is it not possible to train a model that is compatible with multi-agent search under different settings for max range?",
+                "predicted_comment": "In the section 'P1 private observation history', it would be beneficial to provide a brief explanation or reference as to why the trained belief model would no longer be accurate if more than one player was considered."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The motivation for the new task proposed in the paper is not clear.",
+                "predicted_comment": "The introduction provides a good background of the research area. However, the authors could further emphasize the novelty and significance of their work. For instance, it would be helpful to clarify why incorporating spoken content into machine comprehension is important and what potential applications it could have."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 9,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The work is limited in its scope and is not yet ready to be published at ICLR due to lack of comparisons made to prior approaches, making it hard to assess the merits of the proposed approach.",
+                "predicted_comment": "The authors have done a good job of discussing related work. However, they could provide a more detailed comparison of their work with existing methods, highlighting the advantages and disadvantages of each. If not already present, a 'Related Work' section should be included to provide context for their research and to highlight how their work contributes to the existing body of knowledge."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper's contributions and novelty are unclear, and it's uncertain if they warrant acceptance.",
+                "predicted_comment": "The introduction provides a good background of the research area. However, the authors could further emphasize the novelty and significance of their work. For instance, it would be helpful to clarify why incorporating spoken content into machine comprehension is important and what potential applications it could have."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 6,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The proposed approach appears to be incremental: ADPS adds a simple sequential update structure (of a context vector) to DPS, which can be described by only two equations (6 and 7). The simplicity of the changes proposed (over DPS) is not a limitation, but it could be accompanied by an in-depth theoretical analysis, a convincing qualitative discussion or extensive experiments demonstrating the practical relevance of the proposed approach.",
+                "predicted_comment": "The authors present a number of experiments to validate their method, but they do not provide a detailed discussion of the results. It would be helpful if the authors could provide a more thorough analysis of the results, including a discussion of any limitations or potential sources of error."
+            }
+        ],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 6,
+                "predicted_id": 9,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The definitions of $D_\\alpha$ and reverse KL divergence $D_{KL}$ are missing. Usually, the original KL divergence is denoted by $D_{KL}$.",
+                "predicted_comment": "Provide brief explanations or references for concepts such as the reverse KL-divergence, the Blahut-Arimoto algorithm, and the significance of corner cases in the main body of the text."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 17,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper lacks a complete theoretical analysis, such as the upper bound/lower bound on the regret of the algorithm.",
+                "predicted_comment": "Provide more details on the ongoing work on deriving an information theoretic converse result on the regret performance and generalizing the framework to reinforcement learning problems."
+            }
+        ],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 3,
+                "relative_specificity": "same",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The algorithm description in section 3 is very abstract. The paper would benefit from a running example and a dedicated section and pseudo-code describing the algorithm and how it can be instantiated in different experimental settings.",
+                "predicted_comment": "The methodology is explained in detail, but it might be too technical for some readers. It would be helpful to include a more intuitive explanation of the algorithm and its components, possibly with the help of diagrams or flowcharts."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 4,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "I am not putting much weight on section 4 ('Performance Guarantees') given the gap between its assumptions and results vs. what is actually implemented, and the restriction to local optimization.",
+                "predicted_comment": "The authors have done a good job in providing performance guarantees for their proposed method. However, it would be beneficial to provide a more detailed explanation of the assumptions made in this section."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 9,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper could benefit from more detailed discussions in certain areas to improve clarity and understanding.",
+                "predicted_comment": "The authors should consider making the paper more accessible to a broader audience by providing more intuitive explanations of the technical concepts and methods."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 13,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper lacks a comprehensive comparison with prior work, making the contributions over previous work hard to assess.",
+                "predicted_comment": "14. References: Include a brief literature review section to provide context and show how this work builds on previous research. Also, ensure that URLs are cited as references, following the citation style of the journal or conference."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 17,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper lacks a sound theory explaining why linear decay or other smooth decay methods work well.",
+                "predicted_comment": "Provide more justification or evidence for the claim that 'smooth-decaying schedule, such as linear or cosine, are preferred over step decay' in paragraph 52."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper should provide a reasonable explanation for why the initial learning rate influences the testing accuracy, not just the convergence rate for training loss.",
+                "predicted_comment": "The methodology section is detailed and well-explained. However, the authors should consider providing more justification for their choice of parameters and methods. For example, why was the initial learning rate chosen as the single HP? Why was T set to 5 in the experiments?"
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 2,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The algorithm introduces new hyperparameters, such as alpha and the 'rate of change plateaus'. The paper should explain how these hyperparameters are chosen and how they influence the result.",
+                "predicted_comment": "The methodology section is detailed and well-explained. However, the authors should consider providing more justification for their choice of parameters and methods. For example, why was the initial learning rate chosen as the single HP? Why was T set to 5 in the experiments?"
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The contributions of the paper are not clearly stated in the introduction section, making it difficult to identify the main contributions.",
+                "predicted_comment": "The introduction is comprehensive and sets the stage for the rest of the paper. However, it could benefit from a clearer statement of the paper's objectives and contributions. These are mentioned, but could be highlighted more effectively."
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper lacks numerical results and comparisons with competing methods for building attacks in the literature.",
+                "predicted_comment": "The authors have provided a summary and comparison of different attacks, which is very helpful. However, it would be beneficial if the authors could provide a more detailed comparison of the attacks, perhaps in a table format, highlighting the key differences and similarities between the attacks."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 18,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The comparison and difference between this work and prior work is vaguely discussed. There is no detailed comparison with [1], which also formalized MIA with an indistinguishability based framework. The hypothesis testing framework in this work is very similar to the threshold adversary in [1]. The authors should discuss the differences in detail. There is also no comparison to white-box models (e.g. [2]). The authors should discuss how this compares to the proposed framework.",
+                "predicted_comment": "The 'Related Works' section provides a comprehensive overview of the existing literature. However, it would be beneficial to include a brief discussion on how the current study builds upon or differs from these existing works."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 2,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The writing in the approach section isn't very clear. It would be better to define clear notations for all the features/descriptors and use such notations in the figure. The current writing uses various terms like 'instance feature', 'global feature', 'positional-global', 'spatial feature', 'spatial-enhanced', which are confusing.",
+                "predicted_comment": "The methodology is explained in detail, which is commendable. However, the authors could consider providing more intuitive explanations or visual aids to help the reader understand the complex concepts, especially the workings of the Visual Transformer and the spatial-enhanced local descriptor."
+            }
+        ],
+        []
+    ],
+    [
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 14,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not provide a comparison over the computational cost or model size. This is particularly important because the proposed model is non-autoregressive and may be capable of real-time inference.",
+                "predicted_comment": "Include a comparison with other models or methods to provide context for these results in the Inference Speed section."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 19,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The performance of the transformer attention is surprisingly poor, particularly in the audio samples where the output for this model is garbage towards the end of the signal. The authors should provide an explanation for this.",
+                "predicted_comment": "Provide a brief explanation of why this variation occurs and how it impacts the performance of the model in the Variation in Alignment section."
+            }
+        ]
+    ]
+]

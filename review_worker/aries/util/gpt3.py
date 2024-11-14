@@ -18,11 +18,6 @@ class Gpt3CacheClient:
     def __init__(self, cache_db_path):
         self.cache_db = self._init_cache_db(cache_db_path)
 
-        if openai.api_key is None:
-            if "OPENAI_API_KEY" not in os.environ:
-                logger.error("Need OpenAI key in OPENAI_API_KEY")
-            openai.api_key = os.environ["OPENAI_API_KEY"]
-
         self.tokenizer = None
         self.tokenizers_by_model = dict()
 
@@ -154,6 +149,12 @@ class Gpt3CacheClient:
         """Deprecated. Use prompt_completion() instead."""
         return self.prompt_completion(*args, **kwargs)
 
+    def _ensure_openai_keys(self):
+        if openai.api_key is None:
+            if "OPENAI_API_KEY" not in os.environ:
+                logger.error("Need OpenAI key in OPENAI_API_KEY")
+            openai.api_key = os.environ["OPENAI_API_KEY"]
+
     def prompt_completion(
         self,
         model,
@@ -209,6 +210,7 @@ class Gpt3CacheClient:
                 cache_json = dbrecs[0][0]
         if cache_json is None:
             logger.debug("UNCACHED prompt completion")
+            self._ensure_openai_keys()
             resp = openai.Completion.create(**db_keyvals)
             insert_keyvals = db_keyvals.copy()
             cache_json = json.dumps(resp)
@@ -295,6 +297,7 @@ class Gpt3CacheClient:
                 cache_json = dbrecs[0][0]
         if cache_json is None:
             logger.debug("UNCACHED chat completion")
+            self._ensure_openai_keys()
 
             model_keyvals = db_keyvals.copy()
             del model_keyvals["messages_json"]

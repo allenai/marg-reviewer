@@ -1,0 +1,1490 @@
+[
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The authors claim that using Pre-LN rather than Post-LN transformers leads to faster convergence, but the models converge to the same result. This work is incremental as Wang et al. have already shown the benefits of Pre-LN rather than Post-LN transformers for machine translation.",
+                "predicted_comment": "The authors reference important previous work, such as Vaswani et al., 2017 and Liu et al., 2019a, but could do a better job of explaining how their work expands on these studies. Specifically, the authors should clarify how their results differ from those of Vaswani et al., 2017 and Liu et al., 2019a, and why these differences are significant. This would help readers understand the novelty and significance of the authors' work."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The authors should have performed multiple runs of their experiments and shown the standard deviations across runs to make their results more convincing.",
+                "predicted_comment": "The paper acknowledges the sensitivity of the validation accuracy to random seeds and has taken steps to address this issue by repeating experiments with different random seeds. However, the paper does not provide specific details on the range of random seeds used or the statistical analysis of the results from these multiple runs. Providing these details would strengthen the paper by giving readers a better understanding of the robustness of the results. For example, the authors could report the range of random seeds used and the average and standard deviation of the results."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The novelty of the paper is limited as Pre-LN placement has been used in prior work.",
+                "predicted_comment": "The authors reference important previous work, such as Vaswani et al., 2017 and Liu et al., 2019a, but could do a better job of explaining how their work expands on these studies. Specifically, the authors should clarify how their results differ from those of Vaswani et al., 2017 and Liu et al., 2019a, and why these differences are significant. This would help readers understand the novelty and significance of the authors' work."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The theoretical results do not clearly demonstrate that there is a problem with Post-LN and that this problem is fixed by switching to Pre-LN.",
+                "predicted_comment": "The paper provides a novel perspective on the Transformer architecture, focusing on the role of layer normalization and the learning rate warm-up stage. The authors' proposal to place layer normalization inside the residual blocks, creating the Pre-LN Transformer, is innovative and could have significant implications for the training of Transformer models. However, it would be helpful if the authors could provide more detail about the comparison between the Post-LN and Pre-LN Transformers, particularly in terms of their performance when stacking more layers. Additionally, the authors could clarify the explanation of the method and conduct additional experiments or analyses to further support their claims."
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 10,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper does not clearly explain the relationship between the theoretical results and the empirical study.",
+                "predicted_comment": "The inclusion of mathematical proofs of several lemmas related to the Transformer model is a strength of the paper. However, it would be beneficial if the authors could provide a more explicit connection between these lemmas and the performance differences between the Post-LN and Pre-LN Transformer models. For instance, the authors could discuss how the lemmas support the observations about the scale of the gradients and hidden states in the models, and how these factors contribute to the need for a learning rate warm-up stage in the Post-LN Transformer and the faster training of the Pre-LN Transformer."
+            },
+            {
+                "reference_id": 5,
+                "predicted_id": 10,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The connection between the expression that scales in the upper bound and the actual gradient norm is tenuous and there are multiple places where the argument could break down.",
+                "predicted_comment": "The inclusion of mathematical proofs of several lemmas related to the Transformer model is a strength of the paper. However, it would be beneficial if the authors could provide a more explicit connection between these lemmas and the performance differences between the Post-LN and Pre-LN Transformer models. For instance, the authors could discuss how the lemmas support the observations about the scale of the gradients and hidden states in the models, and how these factors contribute to the need for a learning rate warm-up stage in the Post-LN Transformer and the faster training of the Pre-LN Transformer."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 10,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The authors' claims are not always supported by the experimental evidence.",
+                "predicted_comment": "The authors provide a theoretical analysis of the proposed AdaGCCN model and discuss its use of Reinforcement Learning to adaptively adjust the model architecture during training. They also provide some empirical evidence showing that the model can extract more information in a highly efficient way when training graphs in different fields. However, it would be helpful if the authors could provide more empirical evidence, such as experimental results or comparative studies, to fully support their claims about the effectiveness of the proposed optimizations."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 18,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The experimental methodology used in the paper is not well detailed, making it difficult to reproduce the reported results.",
+                "predicted_comment": "The paper lacks explicit information about the reproducibility of the experiments. While it is mentioned that the authors reproduced a model for comparison, there is no clear indication of the availability of the code, data, or other resources used in the experiments. Providing this information is crucial for the scientific community to validate and build upon the findings. Therefore, the authors should include detailed information about the resources used and the steps taken to reproduce the experiments."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 16,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The experimental methodology used in the paper is not well detailed, making it difficult to reproduce the reported results.",
+                "predicted_comment": "The paper mentions the ten benchmark datasets used in the experiments in paragraph 38, but it does not provide specific details such as the number of samples, the number of features, or the distribution of classes. These details are said to be described in Table 1, but this table is not included in the parts of the paper that we have. Providing these details is crucial for understanding the experimental setup and for reproducing the experiments. Please ensure that Table 1 is included in the final version of the paper and that it provides detailed information about each of the ten datasets."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 14,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The authors' claims are not always supported by the experimental evidence.",
+                "predicted_comment": "The authors propose AdaGCCN to address the issue of latent information loss in GCNs and discuss the limitations of static designs in capsule-based GCNs. However, the specific claim that scalar-valued neurons in GCNs can lead to latent information loss is not directly supported with specific theoretical or empirical evidence. It would be beneficial for the authors to provide more direct evidence or a more detailed explanation to support this claim. This could include theoretical justifications or empirical results demonstrating the limitations of scalar-valued neurons in GCNs, and how these limitations lead to latent information loss."
+            },
+            {
+                "reference_id": 7,
+                "predicted_id": 19,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The performance of the model in terms of memory consumption is not completely discussed. Using AM seems to significantly impact the memory consumption and/or the training time of the model.",
+                "predicted_comment": "The paper discusses the computational cost and efficiency of AdaGCCN and other models like GCNs, but it does not provide a direct comparison of these models. A direct comparison, including both time and space complexity, would be valuable for understanding the relative efficiency of AdaGCCN. This could involve comparing the time taken by AdaGCCN and other models to process the same datasets, as well as the GPU memory consumed by these models. This comparison is particularly important given that the paper introduces AdaGCCN as a model that simplifies the search space and eases the computation burden, and it would help to substantiate these claims."
+            }
+        ],
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 19,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper lacks meaningful runtime comparisons between the proposed method and the various previous works without the assistant module. For example, a comparison to a parallel cross validation version of CapsGNN in figure 4 is suggested.",
+                "predicted_comment": "The paper discusses the computational cost and efficiency of AdaGCCN and other models like GCNs, but it does not provide a direct comparison of these models. A direct comparison, including both time and space complexity, would be valuable for understanding the relative efficiency of AdaGCCN. This could involve comparing the time taken by AdaGCCN and other models to process the same datasets, as well as the GPU memory consumed by these models. This comparison is particularly important given that the paper introduces AdaGCCN as a model that simplifies the search space and eases the computation burden, and it would help to substantiate these claims."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The novelty of the paper is limited as the idea of transforming a 2D image pre-train backbone into a 3D version has already been used in other 2D-3D domains. The paper needs to place extra emphasis on discussing why it works and conducting ablation studies.",
+                "predicted_comment": "While the paper provides a theoretical foundation for the use of the same pretrained weights for both 2D images and 3D point-clouds, it could be strengthened by providing more detailed reasoning or evidence to support this approach. Specifically, the paper could benefit from a more in-depth discussion on why the low-level representations of 3D point-clouds and 2D images, despite being drastically different, can represent the same underlying visual concept. Additionally, while the experimental results are promising, it would be helpful to see a comparison with other research efforts that have tried to directly transfer models from images to point-clouds or vice versa. Providing specific references or results from these prior efforts would give more context to the paper's findings and help validate the proposed method."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not provide a theoretical analysis to explain why inflating 2D filters to 3D is reasonable, given the significant domain gap between 2D and 3D datasets.",
+                "predicted_comment": "While the paper provides a theoretical foundation for the use of the same pretrained weights for both 2D images and 3D point-clouds, it could be strengthened by providing more detailed reasoning or evidence to support this approach. Specifically, the paper could benefit from a more in-depth discussion on why the low-level representations of 3D point-clouds and 2D images, despite being drastically different, can represent the same underlying visual concept. Additionally, while the experimental results are promising, it would be helpful to see a comparison with other research efforts that have tried to directly transfer models from images to point-clouds or vice versa. Providing specific references or results from these prior efforts would give more context to the paper's findings and help validate the proposed method."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not clearly address why the proposed method of inflating 2D CNN of image for 3D pointcloud works.",
+                "predicted_comment": "While the paper provides a theoretical foundation for the use of the same pretrained weights for both 2D images and 3D point-clouds, it could be strengthened by providing more detailed reasoning or evidence to support this approach. Specifically, the paper could benefit from a more in-depth discussion on why the low-level representations of 3D point-clouds and 2D images, despite being drastically different, can represent the same underlying visual concept. Additionally, while the experimental results are promising, it would be helpful to see a comparison with other research efforts that have tried to directly transfer models from images to point-clouds or vice versa. Providing specific references or results from these prior efforts would give more context to the paper's findings and help validate the proposed method."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 10,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The authors only perform experiments on classification and segmentation tasks. The performance on detection tasks should also be evaluated.",
+                "predicted_comment": "The paper provides comparative results on the ModelNet 3D Warehouse dataset, which is commendable. However, to provide a more comprehensive evaluation of the model's performance, it would be beneficial to include more comparative results on the S3DIS and SemanticKITTI datasets. These additional results would provide valuable insights into the model's versatility and robustness across different types of 3D point-cloud tasks and environments."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper is missing detailed information, making it difficult to follow the process. For example, in Table 1, the performances of pointnet++ and the performances are listed, but it's unclear how the inflation in point net++ is performed.",
+                "predicted_comment": "The paper provides some details about the adaptation of pretrained-image models for point-cloud recognition and the process of 'inflating' a 2D pretrained ConvNet and minimal finetuning. However, the specifics of these processes, including any specific techniques or parameters used, are not detailed in all parts of the paper. It would be beneficial for the authors to provide a more detailed explanation of these processes, including the specific techniques or parameters used in the finetuning processes (FIP-IO, FIP-IO+BN, FIP-ALL), the specific techniques used to adapt the pretrained-image models for point-cloud recognition, and the specific techniques used to 'inflate' a 2D pretrained ConvNet. Providing these details would enhance the reader's understanding of the paper and improve the reproducibility of the research."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 23,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The role of the partitioning index in the proposed algorithm is unclear, as it does not appear to be used in the experiments. The authors should clarify its importance and usage.",
+                "predicted_comment": "The paper introduces the Stable Rank Normalization (SRN) method and the role of the partitioning index 'k' in the problem formulation. However, it lacks explicit guidelines on how to choose 'k'. The choice of 'k' influences the optimal solution to the spectral norm problem and, consequently, the results and reproducibility of the method. For instance, when 'k' is 0, the problem becomes non-convex, and when 'k' is greater than or equal to 1, the problem is convex. The paper could be improved by providing more explicit guidelines or criteria for choosing 'k', including the implications of different 'k' values on the results and reproducibility of the method. This would help readers better understand the SRN method and its application."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 21,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The empirical evaluation of the normalization technique is insufficient to demonstrate its practical usefulness. The authors should focus more on showing how their regularization can improve generalization in practice.",
+                "predicted_comment": "The paper presents a novel weight-normalization scheme, Stable Rank Normalization (SRN), and demonstrates its effectiveness in improving the generalization behavior of neural networks and the performance of GANs. However, the practical implications of these findings are not clearly explained. The authors should provide a clear explanation of how the improvements in classification accuracy, generalization, and reduction in memorization brought about by SRN could impact real-world applications of neural networks. Additionally, the authors should clarify how SRN reduces memorization, as this is a key aspect of its proposed benefits."
+            }
+        ],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The use of GP to generate images is questionable as GP is more suitable for working in the latent space.",
+                "predicted_comment": "The paper uses a Gaussian Process (GP) layer in the GP Temporal Dynamics Encoder, which inherently assumes a normal distribution for future states. While the paper discusses the use of GPs and their scalability, it does not provide a justification for the specific choice of a GP layer in the GP Temporal Dynamics Encoder or discuss the implications of its inherent assumption of a normal distribution. This is a significant assumption that could affect the performance of the Diverse Video Generator (DVG). The authors should provide a justification for this specific choice and discuss the implications of its inherent assumption of a normal distribution. This would strengthen the paper by making the method more transparent and its assumptions more explicit."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The application of Gaussian Processes (GP) in this work is straightforward and naive. Dynamical modeling with GP has been widely investigated since the introduction of Gaussian Process Dynamical Model in NIPs 2005.",
+                "predicted_comment": "The authors have used Gaussian Processes (GP) and LSTM temporal dynamics encoder to model the temporal dynamics of their model, and they have compared the performance of different dynamics models (RNN, GRU, LSTM) on various datasets. However, it is unclear if the authors have conducted an explicit analysis of the temporal dynamics of their model. Given the importance of temporal dynamics in the model's operation, particularly in leveraging the changing GP distribution over time to estimate when an on-going action sequence completes, an explicit analysis of these dynamics could be beneficial. This analysis could include a discussion of how the temporal dynamics affect the model's performance and a comparison of the model's performance with and without the temporal dynamics."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The experiments are only evaluated on Hanabi, raising concerns about the generalizability of the method. The paper should include at least one experiment evaluated on a different game, such as Leduc, to demonstrate its applicability to different imperfect information games.",
+                "predicted_comment": "The paper provides a robust application of the Learned Belief Search (LBS) method in the context of 2-player Hanabi, demonstrating its efficiency in a partially observable environment. However, to further substantiate the generalizability of the LBS method, it would be beneficial to test it in other environments that involve partially observable Markov decision processes (POMDPs). These could include other cooperative multi-agent settings where the state of the game is not fully observable by all players, such as other card games or cooperative multi-agent video games with limited player vision or information. This would provide a more comprehensive demonstration of the method's scalability and applicability to high-dimensional state spaces."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 17,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The experiment settings, problem description, and discussions need more elaboration.",
+                "predicted_comment": "The experimental setup used to evaluate the Learned Belief Search (LBS) method lacks crucial details that would allow for the replication of the study and the validation of the results. Specifically, the paper does not provide information about the hardware used for the experiments. This information is important as it could impact the performance and the efficiency of the LBS method. Additionally, while the paper mentions that the authors followed most practices from the open-source code of Other-Play (Hu et al., 2020) for training the BP with reinforcement learning and left their hyper-parameters unchanged, the exact values of these hyperparameters are not provided. Providing these details would allow other researchers to accurately replicate the training process and verify the results."
+            }
+        ],
+        [
+            {
+                "reference_id": 4,
+                "predicted_id": 4,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The efficacy of LBS, especially in more complex environments like Contract Bridge, is not convincingly demonstrated despite the provided ablation studies.",
+                "predicted_comment": "While the paper provides a comparison of different versions of Learned Belief Search (LBS), it would be beneficial to include a traditional ablation study to understand the contribution of each component of LBS, specifically the blueprint policy (BP) and the belief model. This would provide a clearer understanding of the individual impact of each component on the overall performance of LBS. For instance, how does the performance change when the belief model is removed or replaced with a simpler model? Similarly, what is the impact of the blueprint policy on the performance? This additional analysis would strengthen the paper by providing deeper insights into the workings of LBS."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 4,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper's proposed method, LBS, is highly dependent on the well-trained Blue Policy (BP). The importance of BP's contribution to the final performance is unclear.",
+                "predicted_comment": "While the paper provides a comparison of different versions of Learned Belief Search (LBS), it would be beneficial to include a traditional ablation study to understand the contribution of each component of LBS, specifically the blueprint policy (BP) and the belief model. This would provide a clearer understanding of the individual impact of each component on the overall performance of LBS. For instance, how does the performance change when the belief model is removed or replaced with a simpler model? Similarly, what is the impact of the blueprint policy on the performance? This additional analysis would strengthen the paper by providing deeper insights into the workings of LBS."
+            }
+        ],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 17,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The experimental setup requires significantly more details on the hardware used for training, testing and validating.",
+                "predicted_comment": "The experimental setup used to evaluate the Learned Belief Search (LBS) method lacks crucial details that would allow for the replication of the study and the validation of the results. Specifically, the paper does not provide information about the hardware used for the experiments. This information is important as it could impact the performance and the efficiency of the LBS method. Additionally, while the paper mentions that the authors followed most practices from the open-source code of Other-Play (Hu et al., 2020) for training the BP with reinforcement learning and left their hyper-parameters unchanged, the exact values of these hyperparameters are not provided. Providing these details would allow other researchers to accurately replicate the training process and verify the results."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The work is limited in its scope and is not yet ready to be published at ICLR due to lack of comparisons made to prior approaches, making it hard to assess the merits of the proposed approach.",
+                "predicted_comment": "The paper should provide a more detailed comparison between the 'novel unified data distillation approach' and the 'multi-modality fusion mechanism' and existing methods such as FlowQA, SDNet, BERT-base, and ALBERT. Specifically, the paper should clearly highlight the novelty and advantages of these methods over the existing methods. This could be achieved by providing a detailed discussion of the results of the comparison, explaining why the novel methods outperform the existing methods, and discussing the implications of these results for the field of conversational question answering."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper's contributions and novelty are unclear, and it's uncertain if they warrant acceptance.",
+                "predicted_comment": "The paper should provide a more detailed comparison between the 'novel unified data distillation approach' and the 'multi-modality fusion mechanism' and existing methods such as FlowQA, SDNet, BERT-base, and ALBERT. Specifically, the paper should clearly highlight the novelty and advantages of these methods over the existing methods. This could be achieved by providing a detailed discussion of the results of the comparison, explaining why the novel methods outperform the existing methods, and discussing the implications of these results for the field of conversational question answering."
+            }
+        ],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper did not compare to any other active sampling strategies. The authors made no effort to replicate existing methods.",
+                "predicted_comment": "The paper discusses the use of two sampling schemes: DPS and A-DPS. While the A-DPS scheme is more adaptive and can potentially yield better performance, especially on multimodal data, it has a higher computational complexity, which could limit its applicability in scenarios where computational resources are limited or where real-time processing is required. Furthermore, the paper does not provide a comprehensive comparison with other active sampling strategies, which could potentially limit the generalizability of the results. In future work, it would be beneficial to address these points, perhaps by exploring ways to reduce the computational complexity of A-DPS and by comparing A-DPS with other active sampling strategies."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 6,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper contributes by extending DPS into an active/sequential learning framework achieving significant performance gains over DPS, mainly on toy problems. However, there is room for more extensive experimental validation, perhaps beyond MRI.",
+                "predicted_comment": "The method has been tested on the MNIST database and the NYU fastMRI database, which provide some evidence of its performance on image classification and MRI reconstruction tasks. However, to fully validate the effectiveness of the method in real-world scenarios and support the claim that it outperforms other sampling pattern selection methods on downstream task performance, it would be beneficial to test the method on more diverse and complex datasets. This could include datasets from different domains, datasets with different types of data (e.g., text, audio, video), and datasets with more complex structures and relationships. This would provide a more comprehensive understanding of the method's performance and its potential applications."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper contributes by extending DPS into an active/sequential learning framework achieving significant performance gains over DPS, mainly on toy problems. However, there is room for more extensive experimental validation, perhaps beyond MRI.",
+                "predicted_comment": "The paper has demonstrated the versatility of the A-DPS network through tests on a toy example, the MNIST database, and the NYU fastMRI database. These tests cover a range of applications, from simple classification to complex image reconstruction. However, future work could potentially explore testing the A-DPS network on additional tasks and datasets. This could provide further insights into the network's performance and its ability to generalize to different types of data and tasks."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper lacks comparison to other active sub-sampling schemes, such as those proposed by Zhang et al., 2019 and Jin et al., 2019. It would be beneficial to see if the proposed method produces better results than these existing methods.",
+                "predicted_comment": "The paper discusses the use of two sampling schemes: DPS and A-DPS. While the A-DPS scheme is more adaptive and can potentially yield better performance, especially on multimodal data, it has a higher computational complexity, which could limit its applicability in scenarios where computational resources are limited or where real-time processing is required. Furthermore, the paper does not provide a comprehensive comparison with other active sampling strategies, which could potentially limit the generalizability of the results. In future work, it would be beneficial to address these points, perhaps by exploring ways to reduce the computational complexity of A-DPS and by comparing A-DPS with other active sampling strategies."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 12,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The toy example provided is overly constructed and difficult to understand, which does not improve the quality of the paper.",
+                "predicted_comment": "The paper presents a 'challenging toy problem' where a model identifies informative elements from a data stream generated by a hidden Markov model. However, it lacks specific details about how the task model determines which elements are informative and how it observes one color channel out of every three. Providing these details would enhance the reader's understanding of the problem and the task model's strategy. For instance, the paper could explain the criteria or algorithm the task model uses to identify informative elements and the rationale behind observing only one color channel out of every three. The purpose of this suggestion is to improve the clarity and completeness of the paper. By providing specific details about the 'challenging toy problem', the authors can help readers better understand the problem and the task model's strategy. This could also strengthen the paper's argument by showing how the task model effectively handles this problem."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 18,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The bound on the VC dimension for hyperplane augmented neural networks (HANNs) seems quite large: O(k^r). This seems to be a major limitation in the application of the main result of the paper.",
+                "predicted_comment": "The paper uses the VC theorem to provide an upper bound on the VC dimension of HAC(d, r, k) and discusses the limitations of VC theory in explaining the generalization puzzle of overparametrized neural networks. However, a discussion on potential limitations or biases associated with the use of the VC theorem itself would ensure a balanced and comprehensive analysis."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [
+            {
+                "reference_id": 5,
+                "predicted_id": 4,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper lacks scalability experiments with the running time of the algorithm and its comparison to baseline models.",
+                "predicted_comment": "While the paper mentions that DIGRAC is an efficient GNN-based method and discusses its potential for large scale industrial applications, it does not provide a direct comparison of computational efficiency between DIGRAC and existing methods. Such a comparison is crucial for understanding the potential of DIGRAC for large scale industrial applications. The authors should consider providing this comparison, possibly by comparing DIGRAC's speed and space complexity with those of other methods such as DGCN. This would give a more complete picture of DIGRAC's performance and help readers understand its advantages and limitations."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 18,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The algorithm description in section 3 is very abstract. The paper would benefit from a running example and a dedicated section and pseudo-code describing the algorithm and how it can be instantiated in different experimental settings.",
+                "predicted_comment": "The paper provides a comprehensive overview of the Bootstrapped Meta-Gradient (BMG) algorithm, its applications, and its performance. However, the specific steps of the algorithm are not detailed in any section of the paper. Providing a step-by-step description of the BMG algorithm would make it easier for others to understand and implement the algorithm. This could include details such as how the matching function and Target Bootstrap are used in the algorithm, how the algorithm is implemented in different contexts (e.g., reinforcement learning, actor-critic experiments, Q-learning experiments, Atari games), and how the algorithm's performance varies with different parameters (e.g., the meta-learning horizon). This level of detail would not only enhance the clarity of the paper but also its utility for other researchers in the field."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 25,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The implementation and implications of the experiment on multi-task few-shot learning (Sec 6) are unclear. The authors should clarify the intuition of why a 'hot' expert transforms more information than a 'cold' expert, and why BMG is able to use this to improve performance.",
+                "predicted_comment": "In the context of Multi-Task Few-Shot Learning, the paper discusses how BMG is applied by computing task-specific bootstrap targets, with the meta-gradient being the expectation over task-specific matching losses. It also discusses the goal of an experiment to study how the BMG objective behaves in the multi-task setting. However, the paper does not provide specific details about the results of the experiment or how the BMG objective behaved in the multi-task setting. The authors should provide more detail about these results and their implications."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 18,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The methodologies of the experiments are difficult to follow, making it hard to link the results back to intuition or interpretation. More detailed descriptions or an algorithm box in the main text could help address this.",
+                "predicted_comment": "The paper provides a comprehensive overview of the Bootstrapped Meta-Gradient (BMG) algorithm, its applications, and its performance. However, the specific steps of the algorithm are not detailed in any section of the paper. Providing a step-by-step description of the BMG algorithm would make it easier for others to understand and implement the algorithm. This could include details such as how the matching function and Target Bootstrap are used in the algorithm, how the algorithm is implemented in different contexts (e.g., reinforcement learning, actor-critic experiments, Q-learning experiments, Atari games), and how the algorithm's performance varies with different parameters (e.g., the meta-learning horizon). This level of detail would not only enhance the clarity of the paper but also its utility for other researchers in the field."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 5,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The qualitative evaluation does not yield clear conclusions. It would be beneficial to provide evidence that 'GRAPHIX demonstrates strong inductive biases in learning complex bug-fix patterns' or some conclusion on the kinds of bugs that GRAPHIX tends to fix.",
+                "predicted_comment": "While the paper does discuss some unsuccessful cases of bug fixes suggested by the model, it would be beneficial to provide a more detailed analysis of these cases. Specifically, identifying common patterns among these failures could help readers understand the limitations of the model more clearly. Additionally, discussing potential improvements to the model based on these failures could provide valuable insights for future work. This would not only enhance the completeness of the paper but also provide a clear direction for future research."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 14,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not convincingly demonstrate model novelty or significant improvement to the state-of-the-art on the provided baseline.",
+                "predicted_comment": "The paper's discussion of the ablation studies comparing the performance of GRAPHIX with other models lacks specific details that are crucial for understanding the extent of the improvements achieved by GRAPHIX and validating the paper's claims. Specifically, the paper should provide more information on the performance metrics used for comparison, the exact improvements achieved by GRAPHIX, and the detailed configuration of the models used for comparison. Providing these details would enhance the clarity and depth of the paper's discussion of the ablation studies and strengthen its claims."
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "reference_id": 7,
+                "predicted_id": 17,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper needs to provide a more detailed analysis of the ASDL-guided decoder, especially in comparison with a small instantiation of Hoppity.",
+                "predicted_comment": "The paper mentions the role of the Abstract Syntax Description Language (ASDL) in guiding the decoder in the GRAPHIX model, but it does not provide detailed information about how ASDL works or how it guides the decoder. Understanding these aspects is crucial for understanding the functioning of the decoder and the performance of the GRAPHIX model. The authors should provide more details about how ASDL guides the decoder in maintaining the syntax of the code during the editing process, and why this guidance is important for learning generic fixing and refactoring patterns from code changes."
+            },
+            {
+                "reference_id": 4,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The contribution of pretraining seems quite slim; performance only increases a little on the Small dataset and actually decreases on the Medium data. This needs more analysis.",
+                "predicted_comment": "Analysis of Pre-training Strategy: The paper introduces a novel pre-training strategy, deleted sub-tree reconstruction, and provides some comparison of the performance of GRAPHIX with and without this strategy. However, the analysis could be more detailed. Specifically, it would be beneficial to include a more thorough investigation of why the pre-training strategy improves performance on the small subsets but does not have the same impact on the medium sets. This could involve exploring whether the synthetic edits used for pre-training are more aligned with the small dataset than the medium, as the authors hypothesize, and discussing potential strategies to address this issue. Such an analysis would provide valuable insights into the effectiveness of the pre-training strategy and could suggest ways to further improve the performance of GRAPHIX."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper lacks a comprehensive comparison with prior work, making the contributions over previous work hard to assess.",
+                "predicted_comment": "The paper provides a comparison of GRAPHIX with other models and uses the standard top-1 exact match accuracy (EM) metric for evaluation. However, it would be beneficial to include more detailed comparison results, such as the exact scores of GRAPHIX and other models on the same benchmark and using the same metrics. This would provide a clearer picture of how GRAPHIX stands in comparison to these models and validate the claim of competitive performance with fewer parameters. Additionally, it would be helpful to include a discussion on why GRAPHIX underperforms PL-BART and CodeT5-small on the medium when pre-trained on CodeSearchNet Java, and how this could be improved."
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 14,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper needs to provide equal comparisons of Hoppity and one or more deeper non-multihead Graphix models in the 32M parameter domain.",
+                "predicted_comment": "The paper's discussion of the ablation studies comparing the performance of GRAPHIX with other models lacks specific details that are crucial for understanding the extent of the improvements achieved by GRAPHIX and validating the paper's claims. Specifically, the paper should provide more information on the performance metrics used for comparison, the exact improvements achieved by GRAPHIX, and the detailed configuration of the models used for comparison. Providing these details would enhance the clarity and depth of the paper's discussion of the ablation studies and strengthen its claims."
+            },
+            {
+                "reference_id": 6,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper needs to clarify whether the ensemble-of-graphs model is meant to be a contribution in general or just for source code.",
+                "predicted_comment": "The authors' model, GRAPHIX, is designed to work with Abstract Syntax Trees (ASTs) with an underlying syntax language. This design choice allows the model to leverage the hierarchical and structural information inherent in ASTs, which is beneficial for the task of automated program repair. However, this also means that the model may not be directly applicable to arbitrary graph structures that do not have an underlying syntax language. The authors do not discuss this limitation in detail, nor do they provide evidence or examples to demonstrate how their model could be adapted to work with such graph structures. It would be beneficial for the authors to address this limitation in more detail and provide evidence or examples to support their claim that the model could be extended to other programming languages or code structures."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 6,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not provide information on the efficiency of the proposed method, especially when compared with other works.",
+                "predicted_comment": "The paper provides a comparison of the proposed model with several existing models, using various metrics and datasets. However, it would be beneficial to provide more context on these comparisons. Specifically, it would be helpful to include the specific metrics and datasets used for comparison with the models mentioned in the 'Related Work' section. Additionally, the exact metrics used for comparison in the protein coarse-grain backmapping task should be specified. Providing this context would help readers understand the significance of the comparisons and the value of the proposed model."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The details of the four functions that make up the attention mechanism are vague. More elaboration on the technical details, such as what are rotation-invariant geometric quantities for tuples, is needed to improve readability.",
+                "predicted_comment": "The method used to incorporate local geometry information into the coarse-grained bead representations is described in the paper using geometric algebra and an attention mechanism. However, the description could be made clearer by providing more details about how these techniques are applied in the context of protein coarse-grain backmapping. For example, it would be helpful to explain how the geometric algebra provides a mathematical structure to deal with geometric objects and how the attention mechanism operates on each tuple of points. Additionally, while the paper mentions the use of geometric algebra attention networks, a type of geometric deep learning method, it would be beneficial to provide more information about how this method explicitly takes into account local geometry."
+            }
+        ],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 12,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The authors do not clearly describe how the geometric product helps to achieve the rotation-invariant attributes. This should be explained in the main manuscript since this is one of the main contributions.",
+                "predicted_comment": "The paper provides a detailed discussion of 'invariant' and 'covariant' attributes in the context of geometric deep learning, including the use of rotation-and permutation-equivariant architectures and geometric algebra. However, it would be helpful to include specific examples of these attributes in the proposed architecture or the experiments. This would provide readers with a concrete understanding of these concepts and how they are applied in the model. For instance, the authors could illustrate how the model is invariant to rotations and permutations in the context of a specific task, or how the rotation-covariant layers in the model work with a specific input data."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 15,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "In a related vein to the previous question, how much is CnC buying us as compared to the usual supervised contrastive training? It would be good to see SupCon as a baseline in Table 1. This seems an important baseline, since the main idea of CnC is to pull items from the same class together in feature space, which is also done using SupCon.  The main (even only?) difference is the hard positive/negative sampling approach of CnC.",
+                "predicted_comment": "While the paper does compare the CNC method with standard supervised contrastive learning in the context of an ablation study, a more direct and comprehensive comparison would be beneficial. Specifically, it would be helpful to see a comparison that focuses on the unique design choices and properties of the CNC method, such as its use of a two-stage procedure, its avoidance of a projection network, and its use of two-sided contrastive sampling. This would provide a clearer understanding of the unique contributions of the CNC method and its advantages over standard supervised contrastive learning."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 11,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The observation of aligning representation for improving model robustness is not novel. There are a lot of work with similar ideas in domain generalization/adaptation literature, e.g., [1], [2]. There\u2019s also a recent work [3] that applies contrastive learning for doing so. A more comprehensive discussion for these related work needs to be included.",
+                "predicted_comment": "The authors discuss the similarity of their work to Invariant Risk Minimization (IRM) and other related works in domain-invariant learning in section C.3 titled 'LEARNING INVARIANT REPRESENTATIONS'. However, the specific similarities and differences are not clearly outlined in all sections of the paper. It would be beneficial for the authors to provide a more detailed comparison of these methods in all relevant sections. This could involve discussing how their method, Correct-N-Contrast (CNC), improves upon existing methods, its unique contributions, and how it handles environment labels differently from traditional methods like IRM. This comparison is crucial for understanding the authors' work and its significance in the field of domain-invariant learning."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "Section 5.2 is unclear, particularly regarding the role of ERM 'predicting the sensitive attribute'. It is not clear how ERM's predictions of the sensitive attribute play into the CNC algorithm.",
+                "predicted_comment": "The paper does an excellent job of identifying the problem of spurious correlations in machine learning models and proposing a novel method, Correct-N-Contrast (CNC), to address this issue. However, the explanation of the CNC method could be more detailed. Specifically, it would be beneficial to elaborate on the two-stage procedure of the CNC method. In the first stage, an Empirical Risk Minimization (ERM) model is trained, which helps infer group information, i.e., spurious attributes. In the second stage, the aim is to improve representation alignment by 'pulling together' same-class datapoints and 'pushing apart' different-class datapoints, regardless of their individual groups or spurious features. This is achieved via supervised contrastive learning, using the heuristic that samples with the same ERM predictions exhibit similar spurious features (and vice versa). With a randomly sampled anchor, samples with the same class but different ERM predictions are selected as 'positives' to be pulled together, and samples from different classes but the same ERM prediction as hard 'negatives' to be pushed apart. Training a second model with this sampling scheme and supervised contrastive learning encourages this model to ignore spurious correlations that the initial ERM model learned, and improves representation alignment between same-class data points. Providing these details in the paper would make the CNC method clearer to the reader."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 19,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper lacks conceptual innovation. While the results are solid, there is little insight about the behavior of the method. No ablations are performed beyond the comparison with NAGO, making it hard to assess the importance of the individual components.",
+                "predicted_comment": "The paper would benefit from a more explicit discussion of the potential limitations or drawbacks of AutoKD. For instance, the paper suggests that future work should explore how to fully exploit the distribution of the optimal student family, implying that this is an area that could be improved. However, this is not clearly framed as a limitation of the current method. Additionally, the paper could discuss potential limitations related to the comparison with other methods, the efficiency of the search for the optimal student architecture, and the emulation of the performance of large models with smaller students. This would provide a more balanced view of the proposed method and help readers understand its potential challenges and areas for future improvement."
+            },
+            {
+                "reference_id": 4,
+                "predicted_id": 11,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper does not provide comparisons with other architecture search algorithms for knowledge distillation or surrogate functions, therefore the introduction of a new framework may not be warranted under the claims of the authors.",
+                "predicted_comment": "The paper provides a comparison of AutoKD with other KD methods, which is appreciated. However, the comparison with other automated approaches lacks detail. Providing a more detailed comparison with other automated approaches would offer a clearer understanding of AutoKD's strengths and weaknesses relative to these methods. This would also help validate the claim that AutoKD is more sample efficient than other NAS-based KD solutions, and provide more context for the performance of AutoKD. Therefore, I recommend expanding on the comparison of AutoKD with other automated approaches in the field of automated knowledge distillation."
+            }
+        ],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        [],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 6,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper does not comment on the computational cost and comparisons to baseline methods. It would be beneficial to provide such information in the main paper, especially when compared with non-differentiable simulator [Cirio et al., 2014] and prior work on differentiable cloth simulation [Liang et al., In NeurIPS 2019].",
+                "predicted_comment": "The authors have provided some information about how they compared their model to a sheet-level simulator and a Bayesian optimization model, including the performance of their model on different numbers of frames. However, to fully understand the relative performance of the model, it would be helpful if the authors could provide more specific details about these comparisons. For example, what were the exact methods used for comparison? What data sets were involved? What were the quantitative results of the comparisons? Additionally, it would be beneficial if the authors could provide more details about the implementation and use of the Bayesian optimization model in the comparison, as well as the specific metrics used for comparison and the statistical significance of the results. Furthermore, a discussion on the limitations of the compared models and how the authors' model addresses these limitations would provide valuable context for the comparisons."
+            }
+        ],
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 11,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The experiments focus only on simulated woven cloth, and the models are heavily designed. This raises questions about the generalizability of the proposed method to other materials and weaving structures.",
+                "predicted_comment": "The authors have developed a comprehensive model that represents physical properties and forces acting on fabrics. However, the model may not fully capture the complexities of more complex or irregular fabric structures, or accurately represent the interactions between different types of yarns in a composite fabric. The authors should consider these complexities and discuss how they might affect the model's ability to accurately represent physical phenomena."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The design process of the model is heuristic and lacks analysis or ablation study to justify the design choices made.",
+                "predicted_comment": "The paper presents a model that claims to be more explicable, have higher data efficiency, generate more accurate predictions, and be faster in control learning compared to other models. While the paper does provide some comparison with other models and addresses these aspects, the substantiation of these claims is inconsistent. For instance, the aspect of explicability is substantiated by comparing the proposed model with a general sheet model and showing that the proposed model can effectively estimate yarn parameters with underlying physics models of different sizes. However, it would be beneficial to provide more specific details or evidence to substantiate this claim, such as the metrics used, the datasets, and the results. In terms of data efficiency, the paper substantiates the claim by gradually increasing the training data from the first 5 frames to the first 25 frames and showing that the proposed model has high data efficiency. However, it would be helpful to provide more specific details about these evaluations, such as the metrics used, the datasets, and the results. In terms of prediction accuracy, the paper compares the proposed model with a general sheet model and a traditional parameter estimation method based on Bayesian Optimization combined with a yarn-level simulator. The paper shows that the proposed model can effectively estimate yarn parameters with underlying physics models of different sizes, which is not affected by the cloth size. However, it would be beneficial to provide more specific details or evidence to substantiate this claim, such as the metrics used, the datasets, and the results. In terms of speed in control learning, the paper compares the proposed model with a reinforcement learning baseline model: PPO. The paper shows that the full differentiability of the proposed model enables a quicker search for effective control forces. However, it would be beneficial to provide more specific details or evidence to substantiate this claim, such as the metrics used, the datasets, and the results. By providing more specific details and evidence to substantiate these claims, the paper would provide a clearer picture of the advantages of the proposed model over existing ones."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 6,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper should investigate when the linear schedule starts to outperform step-based decay in terms of epochs or iterations. The difference between two schedules for small batch size at the early stage of training might be less in comparison with large batch training, especially when the number of iterations is enough.",
+                "predicted_comment": "The paper provides a robust and high-performing linear schedule for budgeted training. However, it would be beneficial for the readers if the authors could provide more specific conditions under which the linear schedule might not be the optimal choice. For instance, the paper mentions that the linear schedule fails to generalize across budgets when the exponential schedule is well-tuned for a specific task. It would be helpful if the authors could elaborate on this point and provide more examples or conditions where other schedules like step decay, exponential decay, poly, cosine, or htd might be more suitable. This would guide readers on when to use the linear schedule and when to consider other schedules."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 3,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper does not clearly demonstrate the advantages of using a linear scaling schedule over other schedules. For example, step-based schedules outperform the proposed method in 2 of the 4 tasks in Table 2, and Poly and Cosine schedules perform better in some budgets in Figure 2.",
+                "predicted_comment": "The paper provides a robust and high-performing linear schedule for budgeted training. However, it would be beneficial for the readers if the authors could provide more specific conditions under which the linear schedule might not be the optimal choice. For instance, the paper mentions that the linear schedule fails to generalize across budgets when the exponential schedule is well-tuned for a specific task. It would be helpful if the authors could elaborate on this point and provide more examples or conditions where other schedules like step decay, exponential decay, poly, cosine, or htd might be more suitable. This would guide readers on when to use the linear schedule and when to consider other schedules."
+            },
+            {
+                "reference_id": 9,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The authors' rebuttal did not fully address the concern about the lack of understanding of why the linear scaling schedule is better.",
+                "predicted_comment": "The authors present compelling empirical evidence that smooth-decaying schedules, such as linear or cosine, can achieve superior performance under budgeted training. This conclusion is a significant contribution to the paper's overall argument. However, the paper would benefit from a theoretical analysis that explains why these schedules perform better under budgeted training. Such an analysis would not only strengthen the authors' conclusion but also provide readers with a deeper understanding of the underlying mechanisms at play. Therefore, I recommend that the authors consider including a theoretical analysis in future work or as an addition to this paper."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper lacks a sound theory explaining why linear decay or other smooth decay methods work well.",
+                "predicted_comment": "The authors present compelling empirical evidence that smooth-decaying schedules, such as linear or cosine, can achieve superior performance under budgeted training. This conclusion is a significant contribution to the paper's overall argument. However, the paper would benefit from a theoretical analysis that explains why these schedules perform better under budgeted training. Such an analysis would not only strengthen the authors' conclusion but also provide readers with a deeper understanding of the underlying mechanisms at play. Therefore, I recommend that the authors consider including a theoretical analysis in future work or as an addition to this paper."
+            }
+        ],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "While performance seems generally higher, the limitations of the proposed N-CODE method are not clear.",
+                "predicted_comment": "The authors should discuss potential limitations or shortcomings of their N-CODE model. For instance, they could address potential drawbacks of using a sparse prediction strategy, the implications of the output dimension of the encoder growing quadratically with the desired latent code dimension of the bottleneck, and the impact of simplifying the convolution architecture. Discussing these limitations would provide a more balanced view of the work and help readers understand the trade-offs involved in the model's design."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The claim of better performance in less time is not fully supported by the results.",
+                "predicted_comment": "The paper mentions that N-CODE trains quicker and converges earlier than NODEs variants in an image classification task. However, it lacks specific details or metrics about the computational efficiency of N-CODE. Providing such details would help readers understand the computational cost of implementing N-CODE and how it compares to other models. This is important as it could impact the practical applicability of N-CODE. Therefore, I suggest the authors include a more detailed discussion on the computational efficiency of N-CODE, including specific metrics and a comparison with other models."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "No theoretical or empirical evidence is presented that confirms that the training speed of N-CODE is significantly lower compared to NODE.",
+                "predicted_comment": "The paper mentions that N-CODE trains quicker and converges earlier than NODEs variants in an image classification task. However, it lacks specific details or metrics about the computational efficiency of N-CODE. Providing such details would help readers understand the computational cost of implementing N-CODE and how it compares to other models. This is important as it could impact the practical applicability of N-CODE. Therefore, I suggest the authors include a more detailed discussion on the computational efficiency of N-CODE, including specific metrics and a comparison with other models."
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "There is no evaluation of the number of functions evaluations in the paper. According to the abstract, the model trains faster so it seems important to include this information in the paper.",
+                "predicted_comment": "The paper mentions that N-CODE trains quicker and converges earlier than NODEs variants in an image classification task. However, it lacks specific details or metrics about the computational efficiency of N-CODE. Providing such details would help readers understand the computational cost of implementing N-CODE and how it compares to other models. This is important as it could impact the practical applicability of N-CODE. Therefore, I suggest the authors include a more detailed discussion on the computational efficiency of N-CODE, including specific metrics and a comparison with other models."
+            },
+            {
+                "reference_id": 0,
+                "predicted_id": 16,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper is closely related to other works that have also focused on making the weights of neural ODEs time dependent. A more thorough discussion of the differences between these models is needed to better understand where the novelty/contribution comes in.",
+                "predicted_comment": "The authors should provide a more detailed comparison of their approach, neurally-controlled ODEs (N-CODE), with other recent generative techniques. Specifically, they should highlight how learning a family of vector fields parameterized by data is a significant departure from previous continuous-time methods. They should also elaborate on the application of this approach in the context of unsupervised image representation learning."
+            }
+        ]
+    ],
+    [
+        [],
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 9,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "In your conclusion you discuss that you could extend your tuning algorithm to multiple hyperparameters, and I believe in order to truly demonstrate its capabilities this would be required.",
+                "predicted_comment": "The authors have proposed a method that emphasizes computational efficiency, which is crucial for scalability. However, the paper lacks an ablation study that tests the scalability of the method by gradually increasing the number of hyperparameters being optimized. Conducting such a study would provide a clearer picture of the method's scalability and its ability to handle larger datasets and more complex models without a prohibitive increase in computational resources or time. This is particularly important given the authors' emphasis on computational efficiency."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 11,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 5,
+                "score": 1.0,
+                "reference_comment": "The paper does not compare the proposed algorithm to existing state-of-the-art methods, which would be useful for a solid paper.",
+                "predicted_comment": "While the paper discusses the limitations of other state-of-the-art methods for HPO in terms of computational overhead, manual tuning, and generalization across different models, datasets, and experimental configurations, it does not mention or compare the proposed method with any specific state-of-the-art HPO methods. It would be beneficial for the authors to conduct additional experiments to compare their method, autoHyper, with specific state-of-the-art methods. This would provide a more direct comparison and help readers understand the relative performance and advantages of autoHyper."
+            }
+        ],
+        [
+            {
+                "reference_id": 1,
+                "predicted_id": 7,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The algorithm introduces new hyperparameters, such as alpha and the 'rate of change plateaus'. The paper should explain how these hyperparameters are chosen and how they influence the result.",
+                "predicted_comment": "The paper does not explicitly mention any hyperparameters that need to be set specifically for the low-rank factorization method. While it is possible that the method does not require any additional hyperparameters beyond those already mentioned in the paper, such as the initial learning rate, this point is not clear. Almost all optimization methods require some form of hyperparameter tuning, and the lack of explicit mention of this for the low-rank factorization method could potentially mislead readers or make it difficult for them to replicate the method. The authors should clarify whether any specific hyperparameters need to be set for this method, and if so, what they are and how they were chosen."
+            }
+        ]
+    ],
+    [
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 11,
+                "relative_specificity": "same",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "same",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper should either significantly reduce the prominence of the sample efficiency claims or provide a fair experimental comparison against a baseline that has access to the same factored, pre-processed observations and abstract options as the presented technique.",
+                "predicted_comment": "The authors should provide a more precise definition or measure for 'fewer' in the context of the proposed method's sample efficiency and the number of environment interactions required to form complex, long-term plans. This could involve quantifying the reduction in the number of samples or environment interactions required by their method, or comparing it with other methods in a more objective manner. This would allow for a more objective evaluation of their claim and enhance the clarity and credibility of the paper."
+            }
+        ],
+        [
+            {
+                "reference_id": 5,
+                "predicted_id": 4,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper should discuss the limitations of the approach, including the assumptions made such as the frame assumption, that options only affect the object they act upon, and that the world comes pre-segmented according to objects.",
+                "predicted_comment": "While the paper provides a comprehensive discussion on the object-centric approach and its benefits, it lacks an explicit discussion on its limitations, particularly in tasks where the dynamics cannot be fully described by the state of the objects. For instance, in tasks where the object-centric state space is not Markov, the state of the objects alone is insufficient to describe the dynamics. The paper does suggest augmenting the object-centric state space with problem-specific, allocentric information to preserve the Markov property, but a more detailed discussion on this aspect would be beneficial. This would provide a more balanced view of the proposed method and help readers understand its potential limitations and areas for further research."
+            },
+            {
+                "reference_id": 6,
+                "predicted_id": 16,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper should clarify how the grounding is achieved and what knowledge is assumed to arrive at the presented results.",
+                "predicted_comment": "The paper presents a method for learning an object-centric representation of a continuous and high-dimensional environment from pixel data, which is applied to a 2D crafting domain and a series of Minecraft tasks. The method involves learning the type system, predicates, and high-level operators. However, the paper lacks explicit details about how this learning from pixel data is done. Providing more details about this process would help readers understand the method better and appreciate its potential applications. For instance, it would be helpful to know how the agent partitions the options and fits a classifier to each partition's initiation states, and a density estimator to its terminating states. It would also be beneficial to understand how the agent generates a propositional PDDL using these learned preconditions and effects, and how it lifts its representation by replacing the learned propositions with predicates parameterised by the determined object types. Lastly, it would be useful to know how the agent performs problem-specific instantiation."
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper lacks numerical results and comparisons with competing methods for building attacks in the literature.",
+                "predicted_comment": "The paper presents several new attack strategies and provides comparisons among them. However, it lacks direct comparisons with existing methods or baselines. This makes it difficult to evaluate the effectiveness of the proposed methods. To improve the paper, please include comparisons with existing methods that are widely used in the field. The choice of methods for comparison should be justified based on their relevance and widespread use in the field. Present these comparisons in a clear and structured way, such as in a table or a graph, and discuss the results in the text. Explain why your methods perform better or worse than the existing methods, and what this means for the field. This will help readers understand the value of your proposed methods and how they advance the field."
+            },
+            {
+                "reference_id": 5,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "There is a lack of diverse datasets and relevant architectures to validate the results.",
+                "predicted_comment": "Limited Dataset Variety: The experiments are conducted on three datasets: Purchase100, CIFAR100, and MNIST. These datasets, while commonly used, are all image-based and may not fully represent the diverse scenarios where membership inference attacks can be applied. Given the importance of dataset variety in ensuring the robustness and generalizability of the proposed method, it is recommended to include more diverse datasets. Specifically, datasets from different domains (e.g., text, audio, medical, etc.) could provide a more comprehensive evaluation of the proposed method. This would help to ensure that the results are not biased towards a particular type of data and that the method performs well under different privacy concerns."
+            }
+        ],
+        [
+            {
+                "reference_id": 10,
+                "predicted_id": 14,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not specify the learner in the experiments of the main body.",
+                "predicted_comment": "While the paper provides some details about the experimental settings, it does not specify all the hyperparameters used in the experiments or any preprocessing steps for the datasets. This information is crucial for replicating the experiments and fully understanding the results. Although the lack of this information does not necessarily undermine the paper's claims, providing it would strengthen the paper by allowing others to reproduce the work and verify the results."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 11,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The paper's plans are cryptic and each page has many ambiguous sentences with unclear goals.",
+                "predicted_comment": "The paper provides a clear and detailed explanation of the implicit assumptions and simplifications made in prior work that the proposed hypothesis testing framework aims to explain. However, the paper is quite technical and uses a lot of jargon specific to the field of machine learning and privacy. While the paper does a good job of explaining these concepts, it might be challenging for readers who are not familiar with these terms to fully understand the explanations. The paper could benefit from providing more examples or analogies to help less experienced readers understand the concepts better. This would make the paper more accessible to a wider audience and could potentially increase its impact."
+            }
+        ],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 3,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The navigation task is simplified by discretizing into a grid. Single room environments and discrete grids simplify a lot of navigation-related challenges and the authors don't discuss how the proposed architecture will generalize to more complex object navigation tasks.",
+                "predicted_comment": "While the paper provides some details about the environment in which VTNet operates, such as the type of scenes, the number of rooms, and the lack of prior knowledge and additional sensors for the agent, these details are not explicitly stated as assumptions about the environment. Explicitly stating these assumptions would help readers understand the conditions under which VTNet can operate effectively and its applicability in real-world scenarios. For example, the paper could clarify whether VTNet can operate in environments other than the AI2-Thor environment, or in environments with different types of scenes, number of rooms, or availability of prior knowledge and additional sensors."
+            },
+            {
+                "reference_id": 2,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The experimental setup isn't fully reflective of the object goal navigation task. The experiments are conducted in AI2 thor scenes which only contain one room. It's not clear how this method will perform when evaluated on significantly more complicated environments like Matterport / Gibson.",
+                "predicted_comment": "While the paper demonstrates that VTNet outperforms several state-of-the-art methods in the AI2-Thor environment, it would be beneficial to test VTNet in additional environments or more diverse scenarios. This could include outdoor environments like parks or city streets, complex indoor environments like shopping malls or office buildings, and environments with dynamic elements like moving vehicles or people. Testing in these environments would provide a more robust evaluation of VTNet's performance and further strengthen the claim that VTNet outperforms other methods in unseen testing environments."
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "reference_id": 2,
+                "predicted_id": 8,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper should run the method on other frameworks which include slightly larger scenes, such as RoboTHOR, to test if the method generalizes to those as well.",
+                "predicted_comment": "While the paper demonstrates that VTNet outperforms several state-of-the-art methods in the AI2-Thor environment, it would be beneficial to test VTNet in additional environments or more diverse scenarios. This could include outdoor environments like parks or city streets, complex indoor environments like shopping malls or office buildings, and environments with dynamic elements like moving vehicles or people. Testing in these environments would provide a more robust evaluation of VTNet's performance and further strengthen the claim that VTNet outperforms other methods in unseen testing environments."
+            }
+        ]
+    ],
+    [
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 5,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "There is concern about the selection of initial radius $R_0$ and its decay policy, as these parameters should be dataset dependent due to different numbers of categories and the densities of class distributions.",
+                "predicted_comment": "The paper provides some information about the radius decay, such as its definition as a function of the path and the use of a simple strategy where the radius decreases with respect to the path length. However, it lacks specific details on how the radius decay is calculated and implemented. For example, it would be helpful to know how the optimal radius decay is found using cross-validation and how the predefined diagonal matrix D is used to apply the radius decay. Without these details, it is difficult to fully understand and implement the method. Furthermore, the paper mentions that the radius decay may influence the accuracy of the network, but it does not explain how or why this is the case. Providing this information would make the paper more complete and easier to understand."
+            },
+            {
+                "reference_id": 4,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The proposed method depends on a pre-defined semantic hierarchical graph rather than a learned one, which potentially limits the technical value of this work.",
+                "predicted_comment": "The paper does not discuss the limitations of the proposed method. Specifically, the method assumes that the hierarchical structure of the class labels is known and only works on the last layer of the deep neural network. This could limit its applicability in real-world applications where the hierarchical structure is not known or when dealing with more complex models. Additionally, the method's performance could be sensitive to the choice of hyperparameters and the construction of the hierarchy for datasets. Discussing these limitations would provide a more balanced view of the method and suggest directions for future work. For instance, future work could explore techniques for inferring the hierarchical structure from the data itself, extending the method to work on multiple layers of the network, automated methods for hyperparameter tuning, and automated or semi-automated methods for constructing the hierarchy for datasets. We suggest that the authors include a section discussing these limitations of their proposed method and potential ways to overcome these limitations in future work."
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "reference_id": 11,
+                "predicted_id": 2,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not discuss how the proposed method may work if classes do not follow a tree hierarchy.",
+                "predicted_comment": "The paper does not discuss the limitations of the proposed method. Specifically, the method assumes that the hierarchical structure of the class labels is known and only works on the last layer of the deep neural network. This could limit its applicability in real-world applications where the hierarchical structure is not known or when dealing with more complex models. Additionally, the method's performance could be sensitive to the choice of hyperparameters and the construction of the hierarchy for datasets. Discussing these limitations would provide a more balanced view of the method and suggest directions for future work. For instance, future work could explore techniques for inferring the hierarchical structure from the data itself, extending the method to work on multiple layers of the network, automated methods for hyperparameter tuning, and automated or semi-automated methods for constructing the hierarchy for datasets. We suggest that the authors include a section discussing these limitations of their proposed method and potential ways to overcome these limitations in future work."
+            },
+            {
+                "reference_id": 3,
+                "predicted_id": 5,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 3,
+                "score": 0.6,
+                "reference_comment": "The paper does not provide a clear rationale or related work for the use of radius decay in Section 3.1.",
+                "predicted_comment": "The paper provides some information about the radius decay, such as its definition as a function of the path and the use of a simple strategy where the radius decreases with respect to the path length. However, it lacks specific details on how the radius decay is calculated and implemented. For example, it would be helpful to know how the optimal radius decay is found using cross-validation and how the predefined diagonal matrix D is used to apply the radius decay. Without these details, it is difficult to fully understand and implement the method. Furthermore, the paper mentions that the radius decay may influence the accuracy of the network, but it does not explain how or why this is the case. Providing this information would make the paper more complete and easier to understand."
+            }
+        ]
+    ],
+    [
+        [],
+        []
+    ],
+    [
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 1,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 2,
+                "score": 0.4,
+                "reference_comment": "The performance of the proposed model is promising, but still below the baselines.",
+                "predicted_comment": "The authors have compared their model with several state-of-the-art TTS systems, which is commendable. However, to fully demonstrate the incremental improvement offered by their model, it would be beneficial to also compare with simpler baseline models. Specifically, traditional concatenative or parametric TTS systems could serve as useful points of comparison. Concatenative TTS systems use large databases of small speech fragments that are concatenated to form complete utterances, while parametric TTS systems use mathematical models to generate speech. Comparing the proposed model with these simpler models could highlight the specific areas where the authors' model excels, such as in generating more natural-sounding speech or in handling longer sequences. It could also provide a benchmark for evaluating the complexity and computational efficiency of the authors' model. This additional comparison would strengthen the paper by providing a more comprehensive evaluation of the proposed model."
+            }
+        ],
+        [
+            {
+                "reference_id": 0,
+                "predicted_id": 12,
+                "relative_specificity": "more",
+                "relatedness": "high",
+                "pairwise_result": {
+                    "relatedness": "high",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not provide a comparison over the computational cost or model size. This is particularly important because the proposed model is non-autoregressive and may be capable of real-time inference.",
+                "predicted_comment": "While the paper provides a detailed discussion of the computational requirements of the EATS model, including its architecture, training process, and inference speed, it could benefit from including more specific details about the memory usage and the time complexity of the model. These details are crucial for potential users to assess the applicability of the model in their specific, potentially resource-constrained, environments."
+            },
+            {
+                "reference_id": 1,
+                "predicted_id": 0,
+                "relative_specificity": "more",
+                "relatedness": "medium",
+                "pairwise_result": {
+                    "relatedness": "medium",
+                    "relative_specificity": "more",
+                    "same_meaning": true
+                },
+                "count": 4,
+                "score": 0.8,
+                "reference_comment": "The paper does not use widely accepted benchmark datasets. A more direct comparison would be beneficial.",
+                "predicted_comment": "Diversity of Datasets: The paper currently tests the model on a dataset consisting of North American English speakers. To demonstrate the model's generalizability, it would be beneficial to test it on a more diverse range of datasets. This could include datasets representing different languages, accents, and speaking styles. For example, testing the model on datasets in Spanish, Mandarin, or Arabic, and datasets representing a variety of accents and speaking styles within English, would provide a more robust demonstration of the model's applicability across diverse linguistic contexts. This would strengthen the paper by providing evidence of the model's potential for broad applicability."
+            }
+        ],
+        [],
+        []
+    ]
+]
