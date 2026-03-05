@@ -68,6 +68,10 @@ class Gpt3CacheClient:
         for message in messages:
             num_tokens += tokens_per_message
             for key, value in message.items():
+                if value is None:
+                    value = ""
+                elif not isinstance(value, str):
+                    value = str(value)
                 num_tokens += len(tokenizer.encode(value))
                 if key == "name":
                     num_tokens += tokens_per_name
